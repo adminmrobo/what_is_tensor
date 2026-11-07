@@ -1,0 +1,473 @@
+{
+ "registry": "KG_00_registry",
+ "version": "W-0.1",
+ "series": "워드벡터 프로젝트 (AI 연구실 해설 대시보드)",
+ "updated": "2026-10-29",
+ "ids": [
+  {
+   "id": "lab:method/integer-encoding",
+   "type": "Method",
+   "ko": "정수 번호 인코딩",
+   "en": "integer (label) encoding",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/one-hot-encoding",
+   "type": "Method",
+   "ko": "원-핫 인코딩",
+   "en": "one-hot encoding",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/hand-crafted-embedding",
+   "type": "Method",
+   "ko": "손으로 정한 좌표 (3축 임베딩)",
+   "en": "hand-crafted feature embedding",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/learned-embedding",
+   "type": "Method",
+   "ko": "문맥에서 배운 임베딩",
+   "en": "learned distributional embedding",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/ppmi-svd",
+   "type": "Method",
+   "ko": "PPMI + SVD 임베딩",
+   "en": "PPMI-SVD embedding",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/word2vec",
+   "type": "Method",
+   "ko": "word2vec",
+   "en": "word2vec",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/skip-gram-negative-sampling",
+   "type": "Method",
+   "ko": "음수 표본 skip-gram",
+   "en": "skip-gram with negative sampling",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/contextual-embedding",
+   "type": "Method",
+   "ko": "문맥 임베딩",
+   "en": "contextual embedding",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/3cosadd",
+   "type": "Method",
+   "ko": "3CosAdd 유추 풀이",
+   "en": "3CosAdd",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:method/embedding-lookup",
+   "type": "Method",
+   "ko": "임베딩 층 (표 찾기)",
+   "en": "embedding lookup layer",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/word-embedding",
+   "type": "Concept",
+   "ko": "워드 임베딩",
+   "en": "word embedding",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/vector",
+   "type": "Concept",
+   "ko": "벡터",
+   "en": "vector",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/dimension",
+   "type": "Concept",
+   "ko": "차원",
+   "en": "dimension",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/sparse-representation",
+   "type": "Concept",
+   "ko": "희소 표현",
+   "en": "sparse representation",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/dense-representation",
+   "type": "Concept",
+   "ko": "밀집 표현",
+   "en": "dense representation",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/cosine-similarity",
+   "type": "Concept",
+   "ko": "코사인 유사도",
+   "en": "cosine similarity",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/dot-product",
+   "type": "Concept",
+   "ko": "내적",
+   "en": "dot product",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/distributional-hypothesis",
+   "type": "Concept",
+   "ko": "분포 가설",
+   "en": "distributional hypothesis",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/co-occurrence",
+   "type": "Concept",
+   "ko": "동시출현",
+   "en": "co-occurrence",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/ppmi",
+   "type": "Concept",
+   "ko": "PPMI (양의 점별 상호정보량)",
+   "en": "positive pointwise mutual information",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/svd",
+   "type": "Concept",
+   "ko": "특이값 분해 (SVD)",
+   "en": "singular value decomposition",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/vocabulary",
+   "type": "Concept",
+   "ko": "어휘 (V)",
+   "en": "vocabulary",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/polysemy",
+   "type": "Concept",
+   "ko": "다의어",
+   "en": "polysemy",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/embedding-matrix",
+   "type": "Concept",
+   "ko": "임베딩 행렬",
+   "en": "embedding matrix",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/word-analogy",
+   "type": "Concept",
+   "ko": "단어 유추",
+   "en": "word analogy",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:concept/embedding-bias",
+   "type": "Concept",
+   "ko": "임베딩 속 편견",
+   "en": "bias in word embeddings",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:term/theta",
+   "type": "Term",
+   "ko": "θ (두 벡터 사이 각도)",
+   "en": "theta (angle)",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:task/nearest-word-search",
+   "type": "Task",
+   "ko": "가장 비슷한 단어 찾기",
+   "en": "nearest-word search",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:task/word-analogy-solving",
+   "type": "Task",
+   "ko": "유추 문제 풀기",
+   "en": "word analogy task",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:metric/analogy-accuracy",
+   "type": "Metric",
+   "ko": "유추 정확도",
+   "en": "analogy accuracy",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:metric/nearest-hit-rate",
+   "type": "Metric",
+   "ko": "사서 적중률",
+   "en": "nearest-neighbour hit rate",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:metric/table-cells",
+   "type": "Metric",
+   "ko": "표 칸 수·메모리",
+   "en": "table cells and memory",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:dataset/toy-royal-words",
+   "type": "Dataset",
+   "ko": "예시 단어 12개와 3축 좌표",
+   "en": "toy royal-family words (illustrative)",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:dataset/toy-corpus-w01",
+   "type": "Dataset",
+   "ko": "장난감 말뭉치 (시드 7, 잡음 0.15)",
+   "en": "toy corpus W01 (illustrative)",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:limitation/artificial-order",
+   "type": "Limitation",
+   "ko": "뜻 없는 크기·순서",
+   "en": "spurious order in integer codes",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:limitation/zero-similarity",
+   "type": "Limitation",
+   "ko": "모든 쌍 유사도 0",
+   "en": "all pairs orthogonal",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:limitation/dimension-tied-to-vocabulary",
+   "type": "Limitation",
+   "ko": "길이가 어휘 수에 묶임",
+   "en": "dimension grows with vocabulary",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:limitation/hand-chosen-axes",
+   "type": "Limitation",
+   "ko": "축을 사람이 정해야 함",
+   "en": "hand-chosen axes",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:limitation/one-vector-per-word",
+   "type": "Limitation",
+   "ko": "단어당 좌표 하나",
+   "en": "one vector per word type",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:limitation/learned-bias",
+   "type": "Limitation",
+   "ko": "말뭉치 편견 학습",
+   "en": "learns corpus bias",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:analogy/accession-number",
+   "type": "Analogy",
+   "ko": "도서관 등록번호",
+   "en": "library accession number",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:analogy/checkbox-card",
+   "type": "Analogy",
+   "ko": "책마다 체크칸이 있는 대출 카드",
+   "en": "one-checkbox-per-book card",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:analogy/shelf-position",
+   "type": "Analogy",
+   "ko": "서가의 층·줄·칸 위치",
+   "en": "shelf position",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:analogy/co-borrowing",
+   "type": "Analogy",
+   "ko": "함께 빌려 가는 책끼리 붙여 꽂기",
+   "en": "co-borrowing shelving",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:work/harris1954distributional",
+   "type": "Work",
+   "ko": "Harris (1954) Distributional Structure",
+   "en": "Harris 1954",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:work/mikolov2013linguistic",
+   "type": "Work",
+   "ko": "Mikolov·Yih·Zweig (2013) Linguistic Regularities",
+   "en": "Mikolov, Yih & Zweig 2013",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:work/mikolov2013efficient",
+   "type": "Work",
+   "ko": "Mikolov 외 (2013) Efficient Estimation",
+   "en": "Mikolov et al. 2013a",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:work/levy2014neural",
+   "type": "Work",
+   "ko": "Levy·Goldberg (2014) Implicit Matrix Factorization",
+   "en": "Levy & Goldberg 2014",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:work/bolukbasi2016man",
+   "type": "Work",
+   "ko": "Bolukbasi 외 (2016) Debiasing Word Embeddings",
+   "en": "Bolukbasi et al. 2016",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:work/nissim2020fair",
+   "type": "Work",
+   "ko": "Nissim 외 (2020) Fair Is Better than Sensational",
+   "en": "Nissim et al. 2020",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:claim/harris-distribution",
+   "type": "Claim",
+   "ko": "분포 가설은 Harris(1954)의 분포 구조 연구에서 이어진다",
+   "en": "distributional hypothesis traces to Harris 1954",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:claim/king-man-woman-queen",
+   "type": "Claim",
+   "ko": "“King − Man + Woman”은 “Queen”에 아주 가까운 벡터가 된다",
+   "en": "King - Man + Woman is very close to Queen",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:claim/tested-dimensions",
+   "type": "Claim",
+   "ko": "Mikolov 외는 80·320·640차원(합성 1600차원) 벡터를 시험했다",
+   "en": "tested 80, 320, 640 (and 1600) dimensions",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:claim/word2vec-two-architectures",
+   "type": "Claim",
+   "ko": "word2vec 논문은 큰 데이터에서 단어 벡터를 계산하는 새 구조 두 가지를 제안했다",
+   "en": "two novel architectures for word vectors",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:claim/sgns-implicit-pmi",
+   "type": "Claim",
+   "ko": "음수 표본 skip-gram은 이동한 PMI 표를 암묵적으로 분해한다",
+   "en": "SGNS implicitly factorizes a shifted PMI matrix",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:claim/input-exclusion-matters",
+   "type": "Claim",
+   "ko": "유추에서 입력 단어를 후보에 넣으면 정확도가 크게 떨어지고 b가 자주 답이 된다",
+   "en": "allowing input words drops analogy accuracy",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:claim/news-embeddings-gender-stereotypes",
+   "type": "Claim",
+   "ko": "뉴스로 학습한 임베딩에 성별 고정관념이 담긴다",
+   "en": "news-trained embeddings exhibit gender stereotypes",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:question/core",
+   "type": "Question",
+   "ko": "숫자만 보고 왕과 여왕이 비슷하다는 걸 알 수 있을까?",
+   "en": "Can numbers alone tell that king and queen are similar?",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:question/duel-analogy",
+   "type": "Question",
+   "ko": "대결: 원-핫과 3축 임베딩, 유추를 누가 더 맞힐까?",
+   "en": "Duel: one-hot vs 3-axis embedding on analogies",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:question/how-many-dimensions",
+   "type": "Question",
+   "ko": "실제 시스템에서 차원 d는 얼마가 알맞을까? (이 페이지에서 확인하지 않음)",
+   "en": "What dimension d fits a real system? (not established here)",
+   "firstPage": "W01_word_embedding"
+  },
+  {
+   "id": "lab:question/polysemy-next",
+   "type": "Question",
+   "ko": "다의어는 문맥 임베딩으로 어떻게 갈라지나? (다음 편)",
+   "en": "How do contextual embeddings split senses? (next page)",
+   "firstPage": "W01_word_embedding"
+  }
+ ],
+ "works": [
+  {
+   "id": "harris1954distributional",
+   "title": "Distributional Structure",
+   "year": 1954,
+   "doi": "10.1080/00437956.1954.11659520"
+  },
+  {
+   "id": "mikolov2013linguistic",
+   "title": "Linguistic Regularities in Continuous Space Word Representations",
+   "year": 2013,
+   "doi": ""
+  },
+  {
+   "id": "mikolov2013efficient",
+   "title": "Efficient Estimation of Word Representations in Vector Space",
+   "year": 2013,
+   "doi": ""
+  },
+  {
+   "id": "levy2014neural",
+   "title": "Neural Word Embedding as Implicit Matrix Factorization",
+   "year": 2014,
+   "doi": ""
+  },
+  {
+   "id": "bolukbasi2016man",
+   "title": "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings",
+   "year": 2016,
+   "doi": ""
+  },
+  {
+   "id": "nissim2020fair",
+   "title": "Fair Is Better than Sensational: Man Is to Doctor as Woman Is to Doctor",
+   "year": 2020,
+   "doi": "10.1162/coli_a_00379"
+  }
+ ]
+}

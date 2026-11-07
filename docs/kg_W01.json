@@ -1,0 +1,2371 @@
+{
+ "version": "1.0",
+ "page": "W01_word_embedding",
+ "registry": "W-0.1",
+ "nodes": [
+  {
+   "id": "lab:method/integer-encoding",
+   "type": "Method",
+   "label": {
+    "ko": "정수 번호 인코딩",
+    "en": "integer (label) encoding"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv1",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "altLabel": {
+    "ko": [
+     "라벨 인코딩"
+    ]
+   },
+   "definition": {
+    "ko": "단어마다 정수 하나를 붙이는 가장 단순한 변환."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:method/one-hot-encoding",
+   "type": "Method",
+   "label": {
+    "ko": "원-핫 인코딩",
+    "en": "one-hot encoding"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "어휘 크기만큼 긴 벡터에서 그 단어 자리만 1, 나머지는 0으로 두는 방법."
+   },
+   "level": 1,
+   "match": [
+    {
+     "scheme": "wikidata",
+     "id": "",
+     "rel": "closeMatch",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "lab:method/hand-crafted-embedding",
+   "type": "Method",
+   "label": {
+    "ko": "손으로 정한 좌표 (3축 임베딩)",
+    "en": "hand-crafted feature embedding"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "사람이 정한 축(성별·지위·나이)에 단어마다 좌표를 주는 방법. 이 페이지의 설명용 예시."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:method/learned-embedding",
+   "type": "Method",
+   "label": {
+    "ko": "문맥에서 배운 임베딩",
+    "en": "learned distributional embedding"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "단어와 주변 말의 동시출현에서 좌표를 계산해 얻는 임베딩."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:method/ppmi-svd",
+   "type": "Method",
+   "label": {
+    "ko": "PPMI + SVD 임베딩",
+    "en": "PPMI-SVD embedding"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "동시출현 횟수 표를 PPMI로 바꾸고 SVD로 d개 축으로 압축해 단어 좌표를 얻는 방법."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:method/word2vec",
+   "type": "Method",
+   "label": {
+    "ko": "word2vec",
+    "en": "word2vec"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "definition": {
+    "ko": "큰 말뭉치에서 단어 벡터를 학습하는 Mikolov 외(2013)의 모델 묶음(CBOW, skip-gram)."
+   },
+   "level": 3,
+   "match": [
+    {
+     "scheme": "wikidata",
+     "id": "",
+     "rel": "closeMatch",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "lab:method/skip-gram-negative-sampling",
+   "type": "Method",
+   "label": {
+    "ko": "음수 표본 skip-gram",
+    "en": "skip-gram with negative sampling"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "definition": {
+    "ko": "가운데 단어로 주변 단어를 맞히도록 학습하되, 무작위 음수 표본과 구별하게 하는 word2vec 학습법."
+   },
+   "level": 4
+  },
+  {
+   "id": "lab:method/contextual-embedding",
+   "type": "Method",
+   "label": {
+    "ko": "문맥 임베딩",
+    "en": "contextual embedding"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "definition": {
+    "ko": "같은 단어라도 문장마다 다른 벡터를 만드는 임베딩(트랜스포머 계열)."
+   },
+   "level": 4
+  },
+  {
+   "id": "lab:method/3cosadd",
+   "type": "Method",
+   "label": {
+    "ko": "3CosAdd 유추 풀이",
+    "en": "3CosAdd"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "b − a + c와 코사인이 가장 높은 단어를 답으로 고르는 유추 풀이 방식."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:method/embedding-lookup",
+   "type": "Method",
+   "label": {
+    "ko": "임베딩 층 (표 찾기)",
+    "en": "embedding lookup layer"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "원-핫 벡터에 임베딩 행렬을 곱하는 것과 같은, 그 단어의 줄 하나를 꺼내는 연산."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:concept/word-embedding",
+   "type": "Concept",
+   "label": {
+    "ko": "워드 임베딩",
+    "en": "word embedding"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "단어를 짧은 실수 벡터로 나타낸 것. 뜻이 비슷한 단어가 가까이 놓이도록 정하거나 배운다."
+   },
+   "level": 2,
+   "match": [
+    {
+     "scheme": "wikidata",
+     "id": "",
+     "rel": "closeMatch",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/vector",
+   "type": "Concept",
+   "label": {
+    "ko": "벡터",
+    "en": "vector"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#why",
+   "family": "basics",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "숫자를 순서대로 늘어놓은 묶음. 공간의 점이나 화살표로 볼 수 있다."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:concept/dimension",
+   "type": "Concept",
+   "label": {
+    "ko": "차원",
+    "en": "dimension"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "basics",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "벡터에 들어 있는 숫자의 개수."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:concept/sparse-representation",
+   "type": "Concept",
+   "label": {
+    "ko": "희소 표현",
+    "en": "sparse representation"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "대부분이 0인 벡터·행렬. 0이 아닌 자리만 저장해 메모리를 아낀다."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:concept/dense-representation",
+   "type": "Concept",
+   "label": {
+    "ko": "밀집 표현",
+    "en": "dense representation"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "대부분의 칸에 0이 아닌 값이 들어 있는 짧은 벡터."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:concept/cosine-similarity",
+   "type": "Concept",
+   "label": {
+    "ko": "코사인 유사도",
+    "en": "cosine similarity"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "basics",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "두 벡터 사이 각도의 코사인. 내적을 두 길이의 곱으로 나눈다."
+   },
+   "level": 2,
+   "match": [
+    {
+     "scheme": "wikidata",
+     "id": "",
+     "rel": "closeMatch",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/dot-product",
+   "type": "Concept",
+   "label": {
+    "ko": "내적",
+    "en": "dot product"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "basics",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "같은 자리 숫자끼리 곱해 모두 더한 값."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:concept/distributional-hypothesis",
+   "type": "Concept",
+   "label": {
+    "ko": "분포 가설",
+    "en": "distributional hypothesis"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "비슷한 문맥에 나오는 단어는 뜻도 비슷하다는 생각."
+   },
+   "level": 2,
+   "evidence": [
+    "F01"
+   ],
+   "match": [
+    {
+     "scheme": "wikidata",
+     "id": "",
+     "rel": "closeMatch",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/co-occurrence",
+   "type": "Concept",
+   "label": {
+    "ko": "동시출현",
+    "en": "co-occurrence"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "두 말이 같은 문장(또는 창) 안에 함께 나온 것."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:concept/ppmi",
+   "type": "Concept",
+   "label": {
+    "ko": "PPMI (양의 점별 상호정보량)",
+    "en": "positive pointwise mutual information"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "두 말이 우연보다 얼마나 자주 함께 나왔는지의 로그 비율. 음수는 0으로 자른다."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:concept/svd",
+   "type": "Concept",
+   "label": {
+    "ko": "특이값 분해 (SVD)",
+    "en": "singular value decomposition"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "math",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "행렬을 중요한 방향 순서대로 나누는 방법. 앞의 몇 개만 남기면 압축이 된다."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:concept/vocabulary",
+   "type": "Concept",
+   "label": {
+    "ko": "어휘 (V)",
+    "en": "vocabulary"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "모델이 아는 단어 목록. 그 개수를 V로 쓴다."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:concept/polysemy",
+   "type": "Concept",
+   "label": {
+    "ko": "다의어",
+    "en": "polysemy"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "definition": {
+    "ko": "뜻이 여러 개인 단어."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:concept/embedding-matrix",
+   "type": "Concept",
+   "label": {
+    "ko": "임베딩 행렬",
+    "en": "embedding matrix"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "단어 수 V × 차원 d 크기의 표. i번째 줄이 i번째 단어의 좌표다."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:concept/word-analogy",
+   "type": "Concept",
+   "label": {
+    "ko": "단어 유추",
+    "en": "word analogy"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "a : b = c : ? 꼴의 관계를 벡터 연산으로 푸는 것."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:concept/embedding-bias",
+   "type": "Concept",
+   "label": {
+    "ko": "임베딩 속 편견",
+    "en": "bias in word embeddings"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "ethics",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "학습 말뭉치에 담긴 사회적 고정관념이 임베딩의 거리·방향에 남는 현상."
+   },
+   "level": 3,
+   "evidence": [
+    "F07"
+   ]
+  },
+  {
+   "id": "lab:term/theta",
+   "type": "Term",
+   "label": {
+    "ko": "θ (두 벡터 사이 각도)",
+    "en": "theta (angle)"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "basics",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "두 벡터 사이 각도. cos θ가 코사인 유사도다."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:task/nearest-word-search",
+   "type": "Task",
+   "label": {
+    "ko": "가장 비슷한 단어 찾기",
+    "en": "nearest-word search"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "질문 단어와 코사인이 가장 높은 단어를 고르는 일."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:task/word-analogy-solving",
+   "type": "Task",
+   "label": {
+    "ko": "유추 문제 풀기",
+    "en": "word analogy task"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#duel",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "a : b = c : ?의 빈칸을 맞히는 시험."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:metric/analogy-accuracy",
+   "type": "Metric",
+   "label": {
+    "ko": "유추 정확도",
+    "en": "analogy accuracy"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#duel",
+   "family": "evaluation",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "유추 문제 중 맞힌 비율. 입력 세 단어는 후보에서 뺀다."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:metric/nearest-hit-rate",
+   "type": "Metric",
+   "label": {
+    "ko": "사서 적중률",
+    "en": "nearest-neighbour hit rate"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "evaluation",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "가져온 단어가 성별·지위·나이 중 두 가지 이상 같은 비율 (이 페이지의 기준)."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:metric/table-cells",
+   "type": "Metric",
+   "label": {
+    "ko": "표 칸 수·메모리",
+    "en": "table cells and memory"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "evaluation",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "원-핫 V², 임베딩 V×d. float32는 칸당 4바이트."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:dataset/toy-royal-words",
+   "type": "Dataset",
+   "label": {
+    "ko": "예시 단어 12개와 3축 좌표",
+    "en": "toy royal-family words (illustrative)"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "왕·여왕·왕자·공주·남자·여자·소년·소녀·아버지·어머니·아들·딸과 손으로 정한 좌표 (예시 좌표)."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:dataset/toy-corpus-w01",
+   "type": "Dataset",
+   "label": {
+    "ko": "장난감 말뭉치 (시드 7, 잡음 0.15)",
+    "en": "toy corpus W01 (illustrative)"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "주인공 단어 하나와 문맥어 4개로 된 문장을 시드로 만든 설명용 데이터."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:limitation/artificial-order",
+   "type": "Limitation",
+   "label": {
+    "ko": "뜻 없는 크기·순서",
+    "en": "spurious order in integer codes"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv1",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "정수 번호에는 단어 사이에 없는 크기와 순서가 생긴다."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:limitation/zero-similarity",
+   "type": "Limitation",
+   "label": {
+    "ko": "모든 쌍 유사도 0",
+    "en": "all pairs orthogonal"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "원-핫에서는 서로 다른 두 단어의 코사인이 늘 0이다."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:limitation/dimension-tied-to-vocabulary",
+   "type": "Limitation",
+   "label": {
+    "ko": "길이가 어휘 수에 묶임",
+    "en": "dimension grows with vocabulary"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "원-핫 벡터 길이 = 어휘 수. 단어가 늘면 모든 벡터가 길어지고 행렬은 V²으로 커진다."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:limitation/hand-chosen-axes",
+   "type": "Limitation",
+   "label": {
+    "ko": "축을 사람이 정해야 함",
+    "en": "hand-chosen axes"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "축이 모자라면 소녀/딸처럼 다른 단어를 가르지 못하고, 큰 어휘의 축을 사람이 다 정할 수 없다."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:limitation/one-vector-per-word",
+   "type": "Limitation",
+   "label": {
+    "ko": "단어당 좌표 하나",
+    "en": "one vector per word type"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "다의어의 여러 뜻이 한 좌표에 섞인다."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:limitation/learned-bias",
+   "type": "Limitation",
+   "label": {
+    "ko": "말뭉치 편견 학습",
+    "en": "learns corpus bias"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "ethics",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "말뭉치에 담긴 고정관념까지 좌표에 배운다."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:analogy/accession-number",
+   "type": "Analogy",
+   "label": {
+    "ko": "도서관 등록번호",
+    "en": "library accession number"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv1",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "들어온 순서대로 붙인 번호 ↔ 정수 인코딩. 한계: 번호는 내용을 설명하지 않는다."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:analogy/checkbox-card",
+   "type": "Analogy",
+   "label": {
+    "ko": "책마다 체크칸이 있는 대출 카드",
+    "en": "one-checkbox-per-book card"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "책 수만큼 칸이 있는 카드 ↔ 원-핫. 한계: 실제 프로그램은 카드를 통째로 저장하지 않는다."
+   },
+   "level": 1
+  },
+  {
+   "id": "lab:analogy/shelf-position",
+   "type": "Analogy",
+   "label": {
+    "ko": "서가의 층·줄·칸 위치",
+    "en": "shelf position"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "사서가 정한 위치 ↔ 임베딩 좌표. 한계: 실제 임베딩은 수백 차원이고 축에 이름이 없다."
+   },
+   "level": 2
+  },
+  {
+   "id": "lab:analogy/co-borrowing",
+   "type": "Analogy",
+   "label": {
+    "ko": "함께 빌려 가는 책끼리 붙여 꽂기",
+    "en": "co-borrowing shelving"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "대출 기록 ↔ 동시출현으로 배우는 임베딩. 한계: 실제 학습은 예측 목표나 행렬 분해로 한다."
+   },
+   "level": 3
+  },
+  {
+   "id": "lab:work/harris1954distributional",
+   "type": "Work",
+   "label": {
+    "ko": "Harris (1954) Distributional Structure",
+    "en": "Harris 1954"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#ref-1",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "cite": "Harris 1954",
+     "loc": "",
+     "work": "harris1954distributional",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:work/mikolov2013linguistic",
+   "type": "Work",
+   "label": {
+    "ko": "Mikolov·Yih·Zweig (2013) Linguistic Regularities",
+    "en": "Mikolov, Yih & Zweig 2013"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#ref-2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "cite": "Mikolov et al. 2013b",
+     "loc": "",
+     "work": "mikolov2013linguistic",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:work/mikolov2013efficient",
+   "type": "Work",
+   "label": {
+    "ko": "Mikolov 외 (2013) Efficient Estimation",
+    "en": "Mikolov et al. 2013a"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#ref-3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "cite": "Mikolov et al. 2013a",
+     "loc": "",
+     "work": "mikolov2013efficient",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:work/levy2014neural",
+   "type": "Work",
+   "label": {
+    "ko": "Levy·Goldberg (2014) Implicit Matrix Factorization",
+    "en": "Levy & Goldberg 2014"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#ref-4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "cite": "Levy & Goldberg 2014",
+     "loc": "",
+     "work": "levy2014neural",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:work/bolukbasi2016man",
+   "type": "Work",
+   "label": {
+    "ko": "Bolukbasi 외 (2016) Debiasing Word Embeddings",
+    "en": "Bolukbasi et al. 2016"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#ref-5",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "cite": "Bolukbasi et al. 2016",
+     "loc": "",
+     "work": "bolukbasi2016man",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:work/nissim2020fair",
+   "type": "Work",
+   "label": {
+    "ko": "Nissim 외 (2020) Fair Is Better than Sensational",
+    "en": "Nissim et al. 2020"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#ref-6",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "cite": "Nissim et al. 2020",
+     "loc": "",
+     "work": "nissim2020fair",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/harris-distribution",
+   "type": "Claim",
+   "label": {
+    "ko": "분포 가설은 Harris(1954)의 분포 구조 연구에서 이어진다",
+    "en": "distributional hypothesis traces to Harris 1954"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "mid",
+   "coverage": "explained",
+   "definition": {
+    "ko": "단어의 분포(함께 나오는 환경)가 언어 구조 분석의 단서라는 Harris의 논의가 분포 가설의 배경이다."
+   },
+   "level": 2,
+   "evidence": [
+    "F01"
+   ],
+   "source": [
+    {
+     "cite": "Harris 1954",
+     "loc": "Word 10(2–3):146–162 (쪽 위치 미확인)",
+     "work": "harris1954distributional",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/king-man-woman-queen",
+   "type": "Claim",
+   "label": {
+    "ko": "“King − Man + Woman”은 “Queen”에 아주 가까운 벡터가 된다",
+    "en": "King - Man + Woman is very close to Queen"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#top",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "연속 공간 단어 벡터에서 관계가 일정한 벡터 차이로 나타난다는 보고."
+   },
+   "level": 3,
+   "evidence": [
+    "F03"
+   ],
+   "source": [
+    {
+     "cite": "Mikolov et al. 2013b",
+     "loc": "초록",
+     "work": "mikolov2013linguistic",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/tested-dimensions",
+   "type": "Claim",
+   "label": {
+    "ko": "Mikolov 외는 80·320·640차원(합성 1600차원) 벡터를 시험했다",
+    "en": "tested 80, 320, 640 (and 1600) dimensions"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#top",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "논문 수치 그대로."
+   },
+   "level": 3,
+   "evidence": [
+    "F04"
+   ],
+   "source": [
+    {
+     "cite": "Mikolov et al. 2013b",
+     "loc": "실험 절 (표 위치 미확인)",
+     "work": "mikolov2013linguistic",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/word2vec-two-architectures",
+   "type": "Claim",
+   "label": {
+    "ko": "word2vec 논문은 큰 데이터에서 단어 벡터를 계산하는 새 구조 두 가지를 제안했다",
+    "en": "two novel architectures for word vectors"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "CBOW와 skip-gram."
+   },
+   "level": 3,
+   "evidence": [
+    "F02"
+   ],
+   "source": [
+    {
+     "cite": "Mikolov et al. 2013a",
+     "loc": "초록",
+     "work": "mikolov2013efficient",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/sgns-implicit-pmi",
+   "type": "Claim",
+   "label": {
+    "ko": "음수 표본 skip-gram은 이동한 PMI 표를 암묵적으로 분해한다",
+    "en": "SGNS implicitly factorizes a shifted PMI matrix"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "단어-문맥 PMI에서 전역 상수를 뺀 표를 분해하는 것과 같다는 분석."
+   },
+   "level": 4,
+   "evidence": [
+    "F05"
+   ],
+   "source": [
+    {
+     "cite": "Levy & Goldberg 2014",
+     "loc": "초록",
+     "work": "levy2014neural",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/input-exclusion-matters",
+   "type": "Claim",
+   "label": {
+    "ko": "유추에서 입력 단어를 후보에 넣으면 정확도가 크게 떨어지고 b가 자주 답이 된다",
+    "en": "allowing input words drops analogy accuracy"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "원래 구현은 D가 A·B·C와 같을 수 없게 한다. 입력을 허용하면 Google 유추 문제에서 3CosAdd·3CosMul 정확도가 크게 떨어진다."
+   },
+   "level": 3,
+   "evidence": [
+    "F06"
+   ],
+   "source": [
+    {
+     "cite": "Nissim et al. 2020",
+     "loc": "1절, 4.1절",
+     "work": "nissim2020fair",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/news-embeddings-gender-stereotypes",
+   "type": "Claim",
+   "label": {
+    "ko": "뉴스로 학습한 임베딩에 성별 고정관념이 담긴다",
+    "en": "news-trained embeddings exhibit gender stereotypes"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "Bolukbasi 외는 이를 보고하고 줄이는 방법을 제안했다."
+   },
+   "level": 3,
+   "evidence": [
+    "F07"
+   ],
+   "source": [
+    {
+     "cite": "Bolukbasi et al. 2016",
+     "loc": "제목·초록",
+     "work": "bolukbasi2016man",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "id": "lab:question/core",
+   "type": "Question",
+   "label": {
+    "ko": "숫자만 보고 왕과 여왕이 비슷하다는 걸 알 수 있을까?",
+    "en": "Can numbers alone tell that king and queen are similar?"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#top",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 1
+  },
+  {
+   "id": "lab:question/duel-analogy",
+   "type": "Question",
+   "label": {
+    "ko": "대결: 원-핫과 3축 임베딩, 유추를 누가 더 맞힐까?",
+    "en": "Duel: one-hot vs 3-axis embedding on analogies"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#duel",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 2
+  },
+  {
+   "id": "lab:question/how-many-dimensions",
+   "type": "Question",
+   "label": {
+    "ko": "실제 시스템에서 차원 d는 얼마가 알맞을까? (이 페이지에서 확인하지 않음)",
+    "en": "What dimension d fits a real system? (not established here)"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "gap",
+   "confidence": "low",
+   "coverage": "explained",
+   "level": 3
+  },
+  {
+   "id": "lab:question/polysemy-next",
+   "type": "Question",
+   "label": {
+    "ko": "다의어는 문맥 임베딩으로 어떻게 갈라지나? (다음 편)",
+    "en": "How do contextual embeddings split senses? (next page)"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#outro",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 4
+  },
+  {
+   "id": "lab:sim/lv1-average",
+   "type": "Simulation",
+   "label": {
+    "ko": "번호 평균 실험",
+    "en": "integer average demo"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv1",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 1
+  },
+  {
+   "id": "lab:sim/lv2-onehot-growth",
+   "type": "Simulation",
+   "label": {
+    "ko": "원-핫 행렬 크기 계산기",
+    "en": "one-hot growth calculator"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 1
+  },
+  {
+   "id": "lab:sim/lv3-growth-compare",
+   "type": "Simulation",
+   "label": {
+    "ko": "단어 추가: 행렬 vs 3차원 좌표",
+    "en": "add-a-word: matrix vs 3D space"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 2
+  },
+  {
+   "id": "lab:sim/lv3-cosine-analogy",
+   "type": "Simulation",
+   "label": {
+    "ko": "코사인 곡선·히트맵·유추",
+    "en": "cosine curve, heatmap, analogy"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 2
+  },
+  {
+   "id": "lab:sim/lv4-ppmi-svd",
+   "type": "Simulation",
+   "label": {
+    "ko": "장난감 말뭉치 PPMI+SVD",
+    "en": "toy corpus PPMI-SVD"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 3
+  },
+  {
+   "id": "lab:sim/library-behaviour",
+   "type": "Simulation",
+   "label": {
+    "ko": "서가의 사서 (행동으로 보기)",
+    "en": "librarian behaviour view"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 1
+  },
+  {
+   "id": "lab:sim/duel",
+   "type": "Simulation",
+   "label": {
+    "ko": "대결 채점 (유추 8문제)",
+    "en": "duel scoring"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#duel",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "level": 2
+  },
+  {
+   "id": "lab:quiz/lv1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv1-1",
+    "en": "quiz lv1-1"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv1",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/lv1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv1-2",
+    "en": "quiz lv1-2"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv1",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/lv2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv2-1",
+    "en": "quiz lv2-1"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/lv2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv2-2",
+    "en": "quiz lv2-2"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv2",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/lv3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv3-1",
+    "en": "quiz lv3-1"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/lv3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv3-2",
+    "en": "quiz lv3-2"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv3",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/lv4-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv4-1",
+    "en": "quiz lv4-1"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/lv4-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 lv4-2",
+    "en": "quiz lv4-2"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#lv4",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/duel-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 duel-1",
+    "en": "quiz duel-1"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#duel",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  },
+  {
+   "id": "lab:quiz/duel-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "확인 퀴즈 duel-2",
+    "en": "quiz duel-2"
+   },
+   "page": "W01_word_embedding",
+   "anchor": "#duel",
+   "family": "sequence",
+   "anchorType": "D",
+   "flyStrength": "none",
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained"
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:quiz/lv1-1",
+   "p": "lab:assesses",
+   "o": "lab:method/integer-encoding",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/lv1-2",
+   "p": "lab:assesses",
+   "o": "lab:limitation/artificial-order",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/lv2-1",
+   "p": "lab:assesses",
+   "o": "lab:metric/table-cells",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/lv2-2",
+   "p": "lab:assesses",
+   "o": "lab:limitation/zero-similarity",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/lv3-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/cosine-similarity",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/lv3-2",
+   "p": "lab:assesses",
+   "o": "lab:limitation/dimension-tied-to-vocabulary",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/lv4-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/distributional-hypothesis",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/lv4-2",
+   "p": "lab:assesses",
+   "o": "lab:limitation/hand-chosen-axes",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/duel-1",
+   "p": "lab:assesses",
+   "o": "lab:claim/input-exclusion-matters",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/duel-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/embedding-bias",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/integer-encoding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/one-hot-encoding",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/one-hot-encoding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/hand-crafted-embedding",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hand-crafted-embedding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/learned-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/integer-encoding",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/artificial-order",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/artificial-order",
+   "p": "lab:addressedBy",
+   "o": "lab:method/one-hot-encoding",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/one-hot-encoding",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/zero-similarity",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/one-hot-encoding",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/dimension-tied-to-vocabulary",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/zero-similarity",
+   "p": "lab:addressedBy",
+   "o": "lab:method/hand-crafted-embedding",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/dimension-tied-to-vocabulary",
+   "p": "lab:addressedBy",
+   "o": "lab:method/hand-crafted-embedding",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hand-crafted-embedding",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/hand-chosen-axes",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/hand-chosen-axes",
+   "p": "lab:addressedBy",
+   "o": "lab:method/learned-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/learned-embedding",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/one-vector-per-word",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/learned-embedding",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/learned-bias",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/one-vector-per-word",
+   "p": "lab:addressedBy",
+   "o": "lab:method/contextual-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/one-vector-per-word",
+   "p": "lab:raises",
+   "o": "lab:question/polysemy-next",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/learned-bias",
+   "p": "lab:raises",
+   "o": "lab:concept/embedding-bias",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hand-crafted-embedding",
+   "p": "lab:broader",
+   "o": "lab:concept/word-embedding",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/learned-embedding",
+   "p": "lab:broader",
+   "o": "lab:concept/word-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/ppmi-svd",
+   "p": "lab:broader",
+   "o": "lab:method/learned-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word2vec",
+   "p": "lab:broader",
+   "o": "lab:method/learned-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/skip-gram-negative-sampling",
+   "p": "lab:partOf",
+   "o": "lab:method/word2vec",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/contextual-embedding",
+   "p": "lab:broader",
+   "o": "lab:concept/word-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sparse-representation",
+   "p": "lab:broader",
+   "o": "lab:concept/vector",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dense-representation",
+   "p": "lab:broader",
+   "o": "lab:concept/vector",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/one-hot-encoding",
+   "p": "lab:broader",
+   "o": "lab:concept/sparse-representation",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/word-embedding",
+   "p": "lab:broader",
+   "o": "lab:concept/dense-representation",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/ppmi",
+   "p": "lab:partOf",
+   "o": "lab:method/ppmi-svd",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/svd",
+   "p": "lab:partOf",
+   "o": "lab:method/ppmi-svd",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/co-occurrence",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/ppmi",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/distributional-hypothesis",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/learned-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dot-product",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/cosine-similarity",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/vector",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/dot-product",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dimension",
+   "p": "lab:partOf",
+   "o": "lab:concept/vector",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:term/theta",
+   "p": "lab:partOf",
+   "o": "lab:concept/cosine-similarity",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/vocabulary",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/one-hot-encoding",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/embedding-matrix",
+   "p": "lab:partOf",
+   "o": "lab:method/embedding-lookup",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/one-hot-encoding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/embedding-lookup",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/embedding-lookup",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/word-embedding",
+   "anchor": "#big",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cosine-similarity",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/3cosadd",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/3cosadd",
+   "p": "lab:solves",
+   "o": "lab:task/word-analogy-solving",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/word-analogy",
+   "p": "lab:broader",
+   "o": "lab:task/word-analogy-solving",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/polysemy",
+   "p": "lab:raises",
+   "o": "lab:question/polysemy-next",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/one-vector-per-word",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/polysemy",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/word-embedding",
+   "p": "lab:solves",
+   "o": "lab:task/nearest-word-search",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:task/nearest-word-search",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/nearest-hit-rate",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:task/word-analogy-solving",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/analogy-accuracy",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/dimension-tied-to-vocabulary",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/table-cells",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hand-crafted-embedding",
+   "p": "lab:evaluatedOn",
+   "o": "lab:dataset/toy-royal-words",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/ppmi-svd",
+   "p": "lab:evaluatedOn",
+   "o": "lab:dataset/toy-corpus-w01",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/ppmi-svd",
+   "p": "lab:evaluatedOn",
+   "o": "lab:dataset/toy-royal-words",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:analogy/accession-number",
+   "p": "lab:analogyOf",
+   "o": "lab:method/integer-encoding",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:analogy/checkbox-card",
+   "p": "lab:analogyOf",
+   "o": "lab:method/one-hot-encoding",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:analogy/shelf-position",
+   "p": "lab:analogyOf",
+   "o": "lab:method/hand-crafted-embedding",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:analogy/co-borrowing",
+   "p": "lab:analogyOf",
+   "o": "lab:method/learned-embedding",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/one-hot-encoding",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/hand-crafted-embedding",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/duel-analogy",
+   "p": "lab:relatedTo",
+   "o": "lab:metric/analogy-accuracy",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/one-hot-encoding",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/analogy-accuracy",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/hand-crafted-embedding",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/analogy-accuracy",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/core",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/cosine-similarity",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/zero-similarity",
+   "p": "lab:raises",
+   "o": "lab:question/core",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/learned-embedding",
+   "p": "lab:raises",
+   "o": "lab:question/how-many-dimensions",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/artificial-order",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/lv1-average",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/dimension-tied-to-vocabulary",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/lv2-onehot-growth",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/dimension-tied-to-vocabulary",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/lv3-growth-compare",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cosine-similarity",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/lv3-cosine-analogy",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/word-analogy",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/lv3-cosine-analogy",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/ppmi-svd",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/lv4-ppmi-svd",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:task/nearest-word-search",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/library-behaviour",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:task/word-analogy-solving",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/duel",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/harris-distribution",
+   "p": "lab:supports",
+   "o": "lab:concept/distributional-hypothesis",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F01"
+   ]
+  },
+  {
+   "s": "lab:claim/king-man-woman-queen",
+   "p": "lab:supports",
+   "o": "lab:concept/word-analogy",
+   "anchor": "#top",
+   "confidence": "high",
+   "evidence": [
+    "F03"
+   ]
+  },
+  {
+   "s": "lab:claim/king-man-woman-queen",
+   "p": "lab:supports",
+   "o": "lab:concept/word-embedding",
+   "anchor": "#top",
+   "confidence": "high",
+   "evidence": [
+    "F03"
+   ]
+  },
+  {
+   "s": "lab:claim/tested-dimensions",
+   "p": "lab:supports",
+   "o": "lab:concept/dimension",
+   "anchor": "#top",
+   "confidence": "high",
+   "evidence": [
+    "F04"
+   ]
+  },
+  {
+   "s": "lab:claim/word2vec-two-architectures",
+   "p": "lab:supports",
+   "o": "lab:method/word2vec",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F02"
+   ]
+  },
+  {
+   "s": "lab:claim/sgns-implicit-pmi",
+   "p": "lab:supports",
+   "o": "lab:method/skip-gram-negative-sampling",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F05"
+   ]
+  },
+  {
+   "s": "lab:claim/sgns-implicit-pmi",
+   "p": "lab:supports",
+   "o": "lab:method/ppmi-svd",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F05"
+   ]
+  },
+  {
+   "s": "lab:claim/input-exclusion-matters",
+   "p": "lab:supports",
+   "o": "lab:metric/analogy-accuracy",
+   "anchor": "#lv3",
+   "confidence": "high",
+   "evidence": [
+    "F06"
+   ]
+  },
+  {
+   "s": "lab:claim/input-exclusion-matters",
+   "p": "lab:supports",
+   "o": "lab:method/3cosadd",
+   "anchor": "#lv3",
+   "confidence": "high",
+   "evidence": [
+    "F06"
+   ]
+  },
+  {
+   "s": "lab:claim/news-embeddings-gender-stereotypes",
+   "p": "lab:supports",
+   "o": "lab:concept/embedding-bias",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F07"
+   ]
+  },
+  {
+   "s": "lab:claim/harris-distribution",
+   "p": "lab:assertedIn",
+   "o": "lab:work/harris1954distributional",
+   "anchor": "#lv4",
+   "confidence": "mid",
+   "evidence": [
+    "F01"
+   ]
+  },
+  {
+   "s": "lab:claim/king-man-woman-queen",
+   "p": "lab:assertedIn",
+   "o": "lab:work/mikolov2013linguistic",
+   "anchor": "#top",
+   "confidence": "high",
+   "evidence": [
+    "F03"
+   ]
+  },
+  {
+   "s": "lab:claim/tested-dimensions",
+   "p": "lab:assertedIn",
+   "o": "lab:work/mikolov2013linguistic",
+   "anchor": "#top",
+   "confidence": "high",
+   "evidence": [
+    "F04"
+   ]
+  },
+  {
+   "s": "lab:claim/word2vec-two-architectures",
+   "p": "lab:assertedIn",
+   "o": "lab:work/mikolov2013efficient",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F02"
+   ]
+  },
+  {
+   "s": "lab:claim/sgns-implicit-pmi",
+   "p": "lab:assertedIn",
+   "o": "lab:work/levy2014neural",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F05"
+   ]
+  },
+  {
+   "s": "lab:claim/input-exclusion-matters",
+   "p": "lab:assertedIn",
+   "o": "lab:work/nissim2020fair",
+   "anchor": "#lv3",
+   "confidence": "high",
+   "evidence": [
+    "F06"
+   ]
+  },
+  {
+   "s": "lab:claim/news-embeddings-gender-stereotypes",
+   "p": "lab:assertedIn",
+   "o": "lab:work/bolukbasi2016man",
+   "anchor": "#lv4",
+   "confidence": "high",
+   "evidence": [
+    "F07"
+   ]
+  }
+ ]
+}
