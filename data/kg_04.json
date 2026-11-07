@@ -1,0 +1,1720 @@
+{
+ "kg": {
+  "version": "1.0",
+  "page": "04_decompose_change",
+  "series": "텐서 연구실",
+  "nodes": [
+   {
+    "id": "lab:concept/tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "텐서",
+     "en": "tensor"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#why",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "다차원 숫자 배열."
+    }
+   },
+   {
+    "id": "lab:concept/eigenvector",
+    "type": "Concept",
+    "label": {
+     "ko": "고유벡터와 고윳값",
+     "en": "eigenvector and eigenvalue"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv1",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "Av = λv. 방향은 그대로, 길이만 λ배."
+    }
+   },
+   {
+    "id": "lab:method/svd",
+    "type": "Method",
+    "label": {
+     "ko": "특이값 분해(SVD)",
+     "en": "singular value decomposition"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "행렬을 σ·u⊗v 층의 합으로 쪼갠다. 큰 σ부터 k개면 rank k 근사."
+    }
+   },
+   {
+    "id": "lab:method/cp-decomposition",
+    "type": "Method",
+    "label": {
+     "ko": "CP 분해",
+     "en": "CP (CANDECOMP/PARAFAC) decomposition"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "3차 이상 텐서를 벡터 외적 R개의 합으로 근사한다."
+    }
+   },
+   {
+    "id": "lab:method/als",
+    "type": "Method",
+    "label": {
+     "ko": "교대 최소제곱(ALS)",
+     "en": "alternating least squares"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "한 축씩 번갈아 최소제곱으로 푸는 CP 계산법."
+    }
+   },
+   {
+    "id": "lab:method/gradient-descent",
+    "type": "Method",
+    "label": {
+     "ko": "경사하강법",
+     "en": "gradient descent"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "w ← w − η∇L."
+    }
+   },
+   {
+    "id": "lab:concept/gradient-tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "기울기 텐서",
+     "en": "gradient tensor"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv5",
+    "level": 3,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "가중치와 같은 모양의 기울기. 모든 칸을 한 번에 고친다."
+    }
+   },
+   {
+    "id": "lab:concept/learning-rate",
+    "type": "Concept",
+    "label": {
+     "ko": "학습률",
+     "en": "learning rate"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "한 걸음의 크기. 지형의 가파름과 맞아야 한다."
+    }
+   },
+   {
+    "id": "lab:concept/matrix-rank",
+    "type": "Concept",
+    "label": {
+     "ko": "행렬의 rank",
+     "en": "matrix rank"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "0이 아닌 특이값의 개수."
+    }
+   },
+   {
+    "id": "lab:concept/tensor-rank",
+    "type": "Concept",
+    "label": {
+     "ko": "텐서의 rank (CP rank)",
+     "en": "tensor rank"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "원래 텐서를 만드는 데 필요한 최소 외적 조각 수."
+    }
+   },
+   {
+    "id": "lab:concept/low-rank-approx",
+    "type": "Concept",
+    "label": {
+     "ko": "저랭크 근사",
+     "en": "low-rank approximation"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "큰 σ 몇 층만으로 행렬을 근사."
+    }
+   },
+   {
+    "id": "lab:concept/metric-tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "계량 텐서",
+     "en": "metric tensor"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#deep",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "좌표 숫자를 실제 길이·각도로 바꾸는 2차 텐서."
+    }
+   },
+   {
+    "id": "lab:concept/covariant-derivative",
+    "type": "Concept",
+    "label": {
+     "ko": "공변미분",
+     "en": "covariant derivative"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#deep",
+    "level": 5,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "바탕 벡터의 회전을 보정한 미분."
+    }
+   },
+   {
+    "id": "lab:concept/co-contra",
+    "type": "Concept",
+    "label": {
+     "ko": "공변·반변",
+     "en": "covariant and contravariant"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#deep",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "좌표 눈금 변화에 반대로/같이 바뀌는 성분, 아래·위 첨자."
+    }
+   },
+   {
+    "id": "lab:concept/stress-energy",
+    "type": "Concept",
+    "label": {
+     "ko": "응력-에너지 텐서",
+     "en": "stress-energy tensor"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#deep",
+    "level": 5,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "에너지·운동량·압력·응력을 담은 (4,4) 대칭 텐서."
+    }
+   },
+   {
+    "id": "lab:concept/tensor-algebra",
+    "type": "Concept",
+    "label": {
+     "ko": "텐서 대수",
+     "en": "tensor algebra"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#deep",
+    "level": 5,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "모든 차수를 모으고 외적을 곱으로 하는 대수."
+    }
+   },
+   {
+    "id": "lab:limitation/square-only",
+    "type": "Limitation",
+    "label": {
+     "ko": "정사각 행렬에만 있다",
+     "en": "square only"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv1",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/two-axes-only",
+    "type": "Limitation",
+    "label": {
+     "ko": "축 둘(행렬)까지만 쪼갠다",
+     "en": "two axes only"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/need-gradient",
+    "type": "Limitation",
+    "label": {
+     "ko": "조각 찾기에도 고치는 방향이 필요",
+     "en": "need gradient"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/two-numbers-only",
+    "type": "Limitation",
+    "label": {
+     "ko": "숫자 두 개만 고쳤다",
+     "en": "two numbers only"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:method/small-lr",
+    "type": "Method",
+    "label": {
+     "ko": "작은 학습률 0.02",
+     "en": "small learning rate"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:method/large-lr",
+    "type": "Method",
+    "label": {
+     "ko": "큰 학습률 0.09",
+     "en": "large learning rate"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:metric/loss-after-20",
+    "type": "Metric",
+    "label": {
+     "ko": "20걸음 뒤 오차",
+     "en": "loss after 20 steps"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "evaluation",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/dough",
+    "type": "Analogy",
+    "label": {
+     "ko": "반죽 미는 방향 ↔ 고유벡터",
+     "en": "dough"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/films",
+    "type": "Analogy",
+    "label": {
+     "ko": "투명 필름 층 ↔ SVD",
+     "en": "films"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/taste",
+    "type": "Analogy",
+    "label": {
+     "ko": "맛 성분 조합 ↔ CP 분해",
+     "en": "taste"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/foggy",
+    "type": "Analogy",
+    "label": {
+     "ko": "안개 낀 산 ↔ 경사하강",
+     "en": "foggy"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/redpen",
+    "type": "Analogy",
+    "label": {
+     "ko": "빨간 펜 표 ↔ 기울기 텐서",
+     "en": "redpen"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv5",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-big",
+    "type": "Simulation",
+    "label": {
+     "ko": "외적 조각 합",
+     "en": "big"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-eig",
+    "type": "Simulation",
+    "label": {
+     "ko": "고유벡터 찾기",
+     "en": "eig"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-svd",
+    "type": "Simulation",
+    "label": {
+     "ko": "SVD 층 쌓기",
+     "en": "svd"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-cp",
+    "type": "Simulation",
+    "label": {
+     "ko": "CP 분해 ALS",
+     "en": "cp"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-gd",
+    "type": "Simulation",
+    "label": {
+     "ko": "경사하강 지형",
+     "en": "gd"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-nn",
+    "type": "Simulation",
+    "label": {
+     "ko": "가중치·기울기 학습",
+     "en": "nn"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv5",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-metric",
+    "type": "Simulation",
+    "label": {
+     "ko": "극좌표 계량",
+     "en": "metric"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#deep",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t04-duel",
+    "type": "Simulation",
+    "label": {
+     "ko": "학습률 대결",
+     "en": "duel"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:dataset/char-popularity",
+    "type": "Dataset",
+    "label": {
+     "ko": "캐릭터 인기 텐서 (4, 3, 4)",
+     "en": "toy character popularity tensor"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "표정×복장×행동, 취향 2개 + 잡음으로 만든 설명용 데이터."
+    }
+   },
+   {
+    "id": "lab:claim/tensor-rank-hard",
+    "type": "Claim",
+    "label": {
+     "ko": "텐서 rank는 행렬 rank와 달리 구하기 어렵다",
+     "en": "Tensor rank is hard to determine"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:claim/svd-best-lowrank",
+    "type": "Claim",
+    "label": {
+     "ko": "큰 특이값 k개로 만든 근사가 rank k 근사 중 오차가 가장 작다(Eckart–Young 정리)",
+     "en": "Truncated SVD gives the best rank-k approximation (Eckart–Young)"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "mid"
+   },
+   {
+    "id": "lab:claim/cp-als",
+    "type": "Claim",
+    "label": {
+     "ko": "CP 분해는 흔히 ALS로 계산한다",
+     "en": "CP is commonly computed by ALS"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/goodfellow2016deep",
+    "type": "Work",
+    "label": {
+     "ko": "Deep Learning (2016)",
+     "en": "Deep Learning"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#foot",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/kolda2009tensor",
+    "type": "Work",
+    "label": {
+     "ko": "Tensor Decompositions and Applications (2009)",
+     "en": "Kolda & Bader 2009"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#foot",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/core-04",
+    "type": "Question",
+    "label": {
+     "ko": "큰 텐서를 작은 조각으로 설명하고 조금씩 바꿀 수 있나?",
+     "en": "Can we decompose and update tensors?"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#hero",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/next-special",
+    "type": "Question",
+    "label": {
+     "ko": "특별편: 텐서로 격투 게임의 특성공학·딥러닝·최적화를?",
+     "en": "Special: tensors in a fighting game"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#outro",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv1a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1a",
+     "en": "quiz lv1a"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv1b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1b",
+     "en": "quiz lv1b"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv2a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2a",
+     "en": "quiz lv2a"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv2b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2b",
+     "en": "quiz lv2b"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv3a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3a",
+     "en": "quiz lv3a"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv3b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3b",
+     "en": "quiz lv3b"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv4a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4a",
+     "en": "quiz lv4a"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv4b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4b",
+     "en": "quiz lv4b"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv5a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv5a",
+     "en": "quiz lv5a"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv5",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t04-lv5b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv5b",
+     "en": "quiz lv5b"
+    },
+    "page": "04_decompose_change",
+    "anchor": "#lv5",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   }
+  ],
+  "edges": [
+   {
+    "s": "lab:concept/eigenvector",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:method/svd",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/svd",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:method/cp-decomposition",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/cp-decomposition",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:method/gradient-descent",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/gradient-descent",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/gradient-tensor",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/eigenvector",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/square-only",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/square-only",
+    "p": "lab:addressedBy",
+    "o": "lab:method/svd",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/svd",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/two-axes-only",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/two-axes-only",
+    "p": "lab:addressedBy",
+    "o": "lab:method/cp-decomposition",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/cp-decomposition",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/need-gradient",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/need-gradient",
+    "p": "lab:addressedBy",
+    "o": "lab:method/gradient-descent",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/gradient-descent",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/two-numbers-only",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/two-numbers-only",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/gradient-tensor",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/als",
+    "p": "lab:partOf",
+    "o": "lab:method/cp-decomposition",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/matrix-rank",
+    "p": "lab:partOf",
+    "o": "lab:method/svd",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/low-rank-approx",
+    "p": "lab:partOf",
+    "o": "lab:method/svd",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-rank",
+    "p": "lab:partOf",
+    "o": "lab:method/cp-decomposition",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/matrix-rank",
+    "p": "lab:contrastsWith",
+    "o": "lab:concept/tensor-rank",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/learning-rate",
+    "p": "lab:partOf",
+    "o": "lab:method/gradient-descent",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/co-contra",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/metric-tensor",
+    "anchor": "#deep",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/metric-tensor",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/covariant-derivative",
+    "anchor": "#deep",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/stress-energy",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#deep",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-algebra",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#deep",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/cp-decomposition",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/small-lr",
+    "p": "lab:contrastsWith",
+    "o": "lab:method/large-lr",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/small-lr",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/loss-after-20",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/small-lr",
+    "p": "lab:broader",
+    "o": "lab:concept/learning-rate",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/large-lr",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/loss-after-20",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/large-lr",
+    "p": "lab:broader",
+    "o": "lab:concept/learning-rate",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/dough",
+    "p": "lab:analogyOf",
+    "o": "lab:concept/eigenvector",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/films",
+    "p": "lab:analogyOf",
+    "o": "lab:method/svd",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/taste",
+    "p": "lab:analogyOf",
+    "o": "lab:method/cp-decomposition",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/foggy",
+    "p": "lab:analogyOf",
+    "o": "lab:method/gradient-descent",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/redpen",
+    "p": "lab:analogyOf",
+    "o": "lab:concept/gradient-tensor",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/cp-decomposition",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-big",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/eigenvector",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-eig",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/svd",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-svd",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/als",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-cp",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/gradient-descent",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-gd",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/gradient-tensor",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-nn",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/metric-tensor",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-metric",
+    "anchor": "#deep",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/large-lr",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t04-duel",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:sim/t04-cp",
+    "p": "lab:evaluatedOn",
+    "o": "lab:dataset/char-popularity",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/tensor-rank-hard",
+    "p": "lab:supports",
+    "o": "lab:concept/tensor-rank",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/svd-best-lowrank",
+    "p": "lab:supports",
+    "o": "lab:concept/low-rank-approx",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/cp-als",
+    "p": "lab:supports",
+    "o": "lab:method/als",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/tensor-rank-hard",
+    "p": "lab:assertedIn",
+    "o": "lab:work/kolda2009tensor",
+    "anchor": "#foot",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/cp-als",
+    "p": "lab:assertedIn",
+    "o": "lab:work/kolda2009tensor",
+    "anchor": "#foot",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/svd-best-lowrank",
+    "p": "lab:assertedIn",
+    "o": "lab:work/goodfellow2016deep",
+    "anchor": "#foot",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:question/core-04",
+    "p": "lab:relatedTo",
+    "o": "lab:method/cp-decomposition",
+    "anchor": "#hero",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/gradient-tensor",
+    "p": "lab:raises",
+    "o": "lab:question/next-special",
+    "anchor": "#outro",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv1a",
+    "p": "lab:assesses",
+    "o": "lab:concept/eigenvector",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv1b",
+    "p": "lab:assesses",
+    "o": "lab:concept/eigenvector",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv2a",
+    "p": "lab:assesses",
+    "o": "lab:concept/low-rank-approx",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv2b",
+    "p": "lab:assesses",
+    "o": "lab:concept/matrix-rank",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv3a",
+    "p": "lab:assesses",
+    "o": "lab:method/cp-decomposition",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv3b",
+    "p": "lab:assesses",
+    "o": "lab:concept/tensor-rank",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv4a",
+    "p": "lab:assesses",
+    "o": "lab:method/gradient-descent",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv4b",
+    "p": "lab:assesses",
+    "o": "lab:concept/learning-rate",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv5a",
+    "p": "lab:assesses",
+    "o": "lab:concept/gradient-tensor",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t04-lv5b",
+    "p": "lab:assesses",
+    "o": "lab:concept/gradient-tensor",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   }
+  ]
+ },
+ "refs": [
+  {
+   "id": "goodfellow2016deep",
+   "type": "book",
+   "title": "Deep Learning",
+   "author": [
+    {
+     "family": "Goodfellow",
+     "given": "Ian"
+    },
+    {
+     "family": "Bengio",
+     "given": "Yoshua"
+    },
+    {
+     "family": "Courville",
+     "given": "Aaron"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016
+     ]
+    ]
+   },
+   "publisher": "MIT Press",
+   "URL": "https://www.deeplearningbook.org/",
+   "lab": {
+    "work": "lab:work/goodfellow2016deep",
+    "role": "background",
+    "supports": [
+     "lab:claim/svd-best-lowrank",
+     "lab:method/gradient-descent"
+    ],
+    "locs": [
+     {
+      "claim": "lab:claim/svd-best-lowrank",
+      "loc": "2.8절 SVD (최적 근사 성질의 서술 여부는 원문 확인 필요), 4.3절 경사 기반 최적화"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (원문 쪽수 미확인)",
+    "note": "쪽수·DOI 확인 필요"
+   }
+  },
+  {
+   "id": "kolda2009tensor",
+   "type": "article-journal",
+   "title": "Tensor Decompositions and Applications",
+   "author": [
+    {
+     "family": "Kolda",
+     "given": "Tamara G."
+    },
+    {
+     "family": "Bader",
+     "given": "Brett W."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2009
+     ]
+    ]
+   },
+   "container-title": "SIAM Review",
+   "volume": "51",
+   "issue": "3",
+   "lab": {
+    "work": "lab:work/kolda2009tensor",
+    "role": "primary",
+    "supports": [
+     "lab:claim/tensor-rank-hard",
+     "lab:claim/cp-als"
+    ],
+    "locs": [
+     {
+      "claim": "lab:claim/tensor-rank-hard",
+      "loc": "3.1절 tensor rank"
+     },
+     {
+      "claim": "lab:claim/cp-als",
+      "loc": "3.4절 ALS"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (원문 쪽수 미확인)",
+    "note": "쪽수·DOI 확인 필요"
+   }
+  }
+ ],
+ "meta": {
+  "title": "분해와 변화 — 큰 텐서를 쪼개고, 기울기로 바꿔 가기",
+  "series": "텐서 연구실",
+  "number": "04",
+  "creator": [
+   {
+    "name": "안상선",
+    "role": "author",
+    "affiliation": "(주)M-Robo 대표",
+    "nameEn": "Ahn Sangsun"
+   }
+  ],
+  "contributor": [
+   {
+    "name": "AI 보조 제작",
+    "role": "assistant"
+   }
+  ],
+  "date": "2026-11-07",
+  "version": "1.0",
+  "language": [
+   "ko"
+  ],
+  "license": "",
+  "url": "https://adminmrobo.github.io/what_is_tensor/04_decompose_change.html",
+  "repository": "https://github.com/adminmrobo/what_is_tensor",
+  "domain": [
+   "ai"
+  ],
+  "domainNote": "주 분야 인공지능, 수학(선형대수) 보조 — 수학 전용 분야 팩 없음",
+  "about": [
+   "lab:concept/eigenvector",
+   "lab:method/svd",
+   "lab:method/cp-decomposition",
+   "lab:method/gradient-descent",
+   "lab:concept/gradient-tensor"
+  ],
+  "educationalLevel": "입문~중급",
+  "learningResourceType": "interactive explainer",
+  "basedOn": [
+   "goodfellow2016deep",
+   "kolda2009tensor"
+  ],
+  "suggestedCitation": "안상선 (2026). 분해와 변화 — 큰 텐서를 쪼개고, 기울기로 바꿔 가기. 텐서 연구실 04, v1.0. https://adminmrobo.github.io/what_is_tensor/04_decompose_change.html"
+ }
+}

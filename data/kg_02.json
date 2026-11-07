@@ -1,0 +1,1501 @@
+{
+ "kg": {
+  "version": "1.0",
+  "page": "02_tensor_map",
+  "series": "텐서 연구실",
+  "nodes": [
+   {
+    "id": "lab:concept/tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "텐서",
+     "en": "tensor"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#why",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "AI·데이터에서는 다차원 배열, 수학·물리에서는 좌표 변환 규칙을 따르는 대상."
+    }
+   },
+   {
+    "id": "lab:concept/tensor-order",
+    "type": "Concept",
+    "label": {
+     "ko": "차수(축의 개수)",
+     "en": "tensor order"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#big",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "원소 하나를 찾는 인덱스 개수."
+    }
+   },
+   {
+    "id": "lab:concept/tensor-map",
+    "type": "Concept",
+    "label": {
+     "ko": "차수×분야 좌표판",
+     "en": "order-by-field map"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "차수 0~4와 네 분야로 텐서의 쓰임을 정리한 표."
+    }
+   },
+   {
+    "id": "lab:concept/axis-name",
+    "type": "Concept",
+    "label": {
+     "ko": "축 이름",
+     "en": "axis name"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#why",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "축에 붙이는 뜻(매장, 토큰, 변수). shape보다 쓰임을 잘 알려 준다."
+    }
+   },
+   {
+    "id": "lab:concept/pivot-reduce",
+    "type": "Method",
+    "label": {
+     "ko": "축 따라 합치기(피벗)",
+     "en": "reduce along axis (pivot)"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv1",
+    "level": 2,
+    "family": "data",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "한 축을 따라 더해 그 축을 없애는 연산. 차수가 하나 준다."
+    }
+   },
+   {
+    "id": "lab:dataset/sales-cube",
+    "type": "Dataset",
+    "label": {
+     "ko": "판매 큐브 (5, 4, 6)",
+     "en": "toy sales cube"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "data",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "매장×상품×월 설명용 데이터."
+    }
+   },
+   {
+    "id": "lab:concept/embedding-tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "임베딩 텐서",
+     "en": "embedding tensor"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv2",
+    "level": 2,
+    "family": "sequence",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "(문장, 토큰, 차원) 모양으로 단어 벡터를 쌓은 텐서."
+    }
+   },
+   {
+    "id": "lab:concept/padding",
+    "type": "Concept",
+    "label": {
+     "ko": "패딩과 마스크",
+     "en": "padding and mask"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv2",
+    "level": 2,
+    "family": "sequence",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "길이를 맞추려 채운 빈칸과 그것을 무시하라는 표시."
+    }
+   },
+   {
+    "id": "lab:concept/covariance-matrix",
+    "type": "Concept",
+    "label": {
+     "ko": "공분산 행렬",
+     "en": "covariance matrix"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "변수 짝마다 함께 움직이는 정도를 담은 대칭 2차 텐서."
+    }
+   },
+   {
+    "id": "lab:concept/principal-component",
+    "type": "Concept",
+    "label": {
+     "ko": "주성분 방향",
+     "en": "principal direction"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "점구름이 가장 길게 퍼진 방향, 공분산 행렬의 고유벡터."
+    }
+   },
+   {
+    "id": "lab:concept/moment-tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "3·4차 적률 텐서",
+     "en": "higher-order moment tensors"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 4,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "비대칭·두꺼운 꼬리 정보를 담는 (n,n,n), (n,n,n,n) 텐서."
+    }
+   },
+   {
+    "id": "lab:concept/gradient",
+    "type": "Concept",
+    "label": {
+     "ko": "기울기 ∇φ",
+     "en": "gradient"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "가장 가파른 오르막 방향과 그 정도를 담은 벡터."
+    }
+   },
+   {
+    "id": "lab:concept/coordinate-invariance",
+    "type": "Concept",
+    "label": {
+     "ko": "좌표 변환 규칙(텐서의 물리적 정의)",
+     "en": "transformation law"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "좌표를 바꿀 때 성분이 정해진 규칙으로 바뀌고 대상 자체는 그대로인 것."
+    }
+   },
+   {
+    "id": "lab:concept/stress-tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "응력 텐서",
+     "en": "stress tensor"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "물체 속 한 점의 면마다 걸리는 힘을 담은 2차 텐서."
+    }
+   },
+   {
+    "id": "lab:limitation/human-features",
+    "type": "Limitation",
+    "label": {
+     "ko": "특성을 사람이 정함",
+     "en": "human features"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv1",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/too-many-numbers",
+    "type": "Limitation",
+    "label": {
+     "ko": "숫자가 너무 많아 요약이 필요",
+     "en": "too many numbers"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv2",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/coordinate-dependence",
+    "type": "Limitation",
+    "label": {
+     "ko": "좌표를 바꾸면 숫자가 바뀜",
+     "en": "coordinate dependence"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/curved-coords",
+    "type": "Limitation",
+    "label": {
+     "ko": "휘어진 좌표는 규칙이 위치마다 다름",
+     "en": "curved coords"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:method/grayscale",
+    "type": "Method",
+    "label": {
+     "ko": "흑백으로 줄이기",
+     "en": "grayscale (drop channel axis)"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "vision",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "채널 축을 밝기 하나로 합쳐 (6,6,3)→(6,6)."
+    }
+   },
+   {
+    "id": "lab:method/keep-color",
+    "type": "Method",
+    "label": {
+     "ko": "컬러 축 유지",
+     "en": "keep color channels"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "vision",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "(6,6,3) 세 축을 그대로 쓴다."
+    }
+   },
+   {
+    "id": "lab:metric/test-accuracy",
+    "type": "Metric",
+    "label": {
+     "ko": "시험 정확도",
+     "en": "test accuracy"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "evaluation",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "학습에 쓰지 않은 20장에서 맞힌 비율."
+    }
+   },
+   {
+    "id": "lab:dataset/toy-apples",
+    "type": "Dataset",
+    "label": {
+     "ko": "빨강·초록 사과 40장",
+     "en": "toy apples"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "vision",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "밝기가 거의 같은 빨강·초록 사과 설명용 그림."
+    }
+   },
+   {
+    "id": "lab:analogy/pivot-table",
+    "type": "Analogy",
+    "label": {
+     "ko": "엑셀 피벗 ↔ 축 따라 합치기",
+     "en": "pivot table ↔ reduce"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "data",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/word-cards",
+    "type": "Analogy",
+    "label": {
+     "ko": "단어 성격표 카드 ↔ 임베딩",
+     "en": "word cards ↔ embedding"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "sequence",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/hiking-map",
+    "type": "Analogy",
+    "label": {
+     "ko": "돌려 보는 등산 지도 ↔ 좌표 변환",
+     "en": "rotated map ↔ transformation"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t02-board",
+    "type": "Simulation",
+    "label": {
+     "ko": "좌표판",
+     "en": "board"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t02-sales",
+    "type": "Simulation",
+    "label": {
+     "ko": "판매 큐브 합치기",
+     "en": "sales"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t02-embed",
+    "type": "Simulation",
+    "label": {
+     "ko": "문장 임베딩 쌓기",
+     "en": "embed"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t02-cov",
+    "type": "Simulation",
+    "label": {
+     "ko": "공분산 타원",
+     "en": "cov"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t02-grad",
+    "type": "Simulation",
+    "label": {
+     "ko": "기울기와 좌표 회전",
+     "en": "grad"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/t02-duel",
+    "type": "Simulation",
+    "label": {
+     "ko": "흑백 vs 컬러 대결",
+     "en": "duel"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:claim/physics-tensor-def",
+    "type": "Concept",
+    "label": {
+     "ko": "물리·수학의 텐서는 좌표 변환 규칙으로 정의된다",
+     "en": "Tensors in physics are defined by their transformation law"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:claim/cov-eigen-pca",
+    "type": "Claim",
+    "label": {
+     "ko": "공분산 행렬의 고유벡터가 주성분 방향이다",
+     "en": "Principal components are eigenvectors of the covariance matrix"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/goodfellow2016deep",
+    "type": "Work",
+    "label": {
+     "ko": "Deep Learning (2016)",
+     "en": "Deep Learning"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#foot",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/kolda2009tensor",
+    "type": "Work",
+    "label": {
+     "ko": "Tensor Decompositions and Applications (2009)",
+     "en": "Kolda & Bader 2009"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#foot",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/core-02",
+    "type": "Question",
+    "label": {
+     "ko": "같은 축 세기가 분야마다 무엇을 담는가?",
+     "en": "What does each field hold with the same axes?"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#hero",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/duel-02",
+    "type": "Question",
+    "label": {
+     "ko": "축 하나를 버려도 사과를 가려낼까?",
+     "en": "Can we drop an axis and still classify?"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/next-ops",
+    "type": "Question",
+    "label": {
+     "ko": "텐서를 어떻게 곱하고 돌리고 접나? (3장)",
+     "en": "How to operate on tensors? (ch.3)"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#outro",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv1a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1a",
+     "en": "quiz lv1a"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv1b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1b",
+     "en": "quiz lv1b"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv2a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2a",
+     "en": "quiz lv2a"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv2b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2b",
+     "en": "quiz lv2b"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv3a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3a",
+     "en": "quiz lv3a"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv3b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3b",
+     "en": "quiz lv3b"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv4a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4a",
+     "en": "quiz lv4a"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t02-lv4b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4b",
+     "en": "quiz lv4b"
+    },
+    "page": "02_tensor_map",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   }
+  ],
+  "edges": [
+   {
+    "s": "lab:concept/pivot-reduce",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/embedding-tensor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/embedding-tensor",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/covariance-matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/covariance-matrix",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/coordinate-invariance",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/pivot-reduce",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/human-features",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/human-features",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/embedding-tensor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/embedding-tensor",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/too-many-numbers",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/too-many-numbers",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/covariance-matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/covariance-matrix",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/coordinate-dependence",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/coordinate-dependence",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/coordinate-invariance",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/coordinate-invariance",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/curved-coords",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/grayscale",
+    "p": "lab:contrastsWith",
+    "o": "lab:method/keep-color",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/grayscale",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/test-accuracy",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/grayscale",
+    "p": "lab:evaluatedOn",
+    "o": "lab:dataset/toy-apples",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/keep-color",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/test-accuracy",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/keep-color",
+    "p": "lab:evaluatedOn",
+    "o": "lab:dataset/toy-apples",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/grayscale",
+    "p": "lab:broader",
+    "o": "lab:concept/pivot-reduce",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/pivot-table",
+    "p": "lab:analogyOf",
+    "o": "lab:concept/pivot-reduce",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/word-cards",
+    "p": "lab:analogyOf",
+    "o": "lab:concept/embedding-tensor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/hiking-map",
+    "p": "lab:analogyOf",
+    "o": "lab:concept/coordinate-invariance",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-map",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t02-board",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/pivot-reduce",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t02-sales",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/embedding-tensor",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t02-embed",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/covariance-matrix",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t02-cov",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/coordinate-invariance",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t02-grad",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/grayscale",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t02-duel",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:dataset/sales-cube",
+    "p": "lab:partOf",
+    "o": "lab:sim/t02-sales",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-order",
+    "p": "lab:partOf",
+    "o": "lab:concept/tensor-map",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/axis-name",
+    "p": "lab:partOf",
+    "o": "lab:concept/tensor-map",
+    "anchor": "#why",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-map",
+    "p": "lab:explainedIn",
+    "o": "lab:concept/tensor",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/padding",
+    "p": "lab:partOf",
+    "o": "lab:concept/embedding-tensor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/principal-component",
+    "p": "lab:partOf",
+    "o": "lab:concept/covariance-matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/covariance-matrix",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/moment-tensor",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/gradient",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/t02-grad",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/gradient",
+    "p": "lab:partOf",
+    "o": "lab:concept/coordinate-invariance",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/stress-tensor",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/covariance-matrix",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/embedding-tensor",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/physics-tensor-def",
+    "p": "lab:supports",
+    "o": "lab:concept/coordinate-invariance",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/cov-eigen-pca",
+    "p": "lab:supports",
+    "o": "lab:concept/principal-component",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/cov-eigen-pca",
+    "p": "lab:assertedIn",
+    "o": "lab:work/goodfellow2016deep",
+    "anchor": "#foot",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-order",
+    "p": "lab:assertedIn",
+    "o": "lab:work/kolda2009tensor",
+    "anchor": "#foot",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:question/core-02",
+    "p": "lab:relatedTo",
+    "o": "lab:concept/tensor-map",
+    "anchor": "#hero",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/grayscale",
+    "p": "lab:raises",
+    "o": "lab:question/duel-02",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/pivot-reduce",
+    "p": "lab:raises",
+    "o": "lab:question/next-ops",
+    "anchor": "#outro",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv1a",
+    "p": "lab:assesses",
+    "o": "lab:concept/pivot-reduce",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv1b",
+    "p": "lab:assesses",
+    "o": "lab:concept/tensor-order",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv2a",
+    "p": "lab:assesses",
+    "o": "lab:concept/embedding-tensor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv2b",
+    "p": "lab:assesses",
+    "o": "lab:concept/padding",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv3a",
+    "p": "lab:assesses",
+    "o": "lab:concept/covariance-matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv3b",
+    "p": "lab:assesses",
+    "o": "lab:concept/covariance-matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv4a",
+    "p": "lab:assesses",
+    "o": "lab:concept/coordinate-invariance",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t02-lv4b",
+    "p": "lab:assesses",
+    "o": "lab:concept/gradient",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   }
+  ]
+ },
+ "refs": [
+  {
+   "id": "goodfellow2016deep",
+   "type": "book",
+   "title": "Deep Learning",
+   "author": [
+    {
+     "family": "Goodfellow",
+     "given": "Ian"
+    },
+    {
+     "family": "Bengio",
+     "given": "Yoshua"
+    },
+    {
+     "family": "Courville",
+     "given": "Aaron"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016
+     ]
+    ]
+   },
+   "publisher": "MIT Press",
+   "URL": "https://www.deeplearningbook.org/",
+   "lab": {
+    "work": "lab:work/goodfellow2016deep",
+    "role": "background",
+    "supports": [
+     "lab:claim/cov-eigen-pca"
+    ],
+    "locs": [
+     {
+      "claim": "lab:claim/cov-eigen-pca",
+      "loc": "2.12절 Principal Components Analysis"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (원문 쪽수 미확인)",
+    "note": "쪽수·DOI 확인 필요"
+   }
+  },
+  {
+   "id": "kolda2009tensor",
+   "type": "article-journal",
+   "title": "Tensor Decompositions and Applications",
+   "author": [
+    {
+     "family": "Kolda",
+     "given": "Tamara G."
+    },
+    {
+     "family": "Bader",
+     "given": "Brett W."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2009
+     ]
+    ]
+   },
+   "container-title": "SIAM Review",
+   "volume": "51",
+   "issue": "3",
+   "lab": {
+    "work": "lab:work/kolda2009tensor",
+    "role": "background",
+    "supports": [
+     "lab:concept/tensor-order"
+    ],
+    "locs": [
+     {
+      "claim": "lab:concept/tensor-order",
+      "loc": "1절"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (원문 쪽수 미확인)",
+    "note": "쪽수·DOI 확인 필요"
+   }
+  }
+ ],
+ "meta": {
+  "title": "좌표판 — 텐서는 어디에 쓰이나 (차수 × 분야)",
+  "series": "텐서 연구실",
+  "number": "02",
+  "creator": [
+   {
+    "name": "안상선",
+    "role": "author",
+    "affiliation": "(주)M-Robo 대표",
+    "nameEn": "Ahn Sangsun"
+   }
+  ],
+  "contributor": [
+   {
+    "name": "AI 보조 제작",
+    "role": "assistant"
+   }
+  ],
+  "date": "2026-11-07",
+  "version": "1.0",
+  "language": [
+   "ko"
+  ],
+  "license": "",
+  "url": "https://adminmrobo.github.io/what_is_tensor/02_tensor_map.html",
+  "repository": "https://github.com/adminmrobo/what_is_tensor",
+  "domain": [
+   "ai"
+  ],
+  "domainNote": "주 분야 인공지능, 수학(선형대수) 보조 — 수학 전용 분야 팩 없음",
+  "about": [
+   "lab:concept/tensor-map",
+   "lab:concept/pivot-reduce",
+   "lab:concept/embedding-tensor",
+   "lab:concept/covariance-matrix",
+   "lab:concept/coordinate-invariance"
+  ],
+  "educationalLevel": "입문",
+  "learningResourceType": "interactive explainer",
+  "basedOn": [
+   "goodfellow2016deep",
+   "kolda2009tensor"
+  ],
+  "suggestedCitation": "안상선 (2026). 좌표판 — 텐서는 어디에 쓰이나 (차수 × 분야). 텐서 연구실 02, v1.0. https://adminmrobo.github.io/what_is_tensor/02_tensor_map.html"
+ }
+}

@@ -1,0 +1,1727 @@
+{
+ "registry_base": "0.2",
+ "series": "텐서 연구실",
+ "updated": "2026-11-07",
+ "add": [
+  {
+   "id": "lab:concept/scalar",
+   "type": "Concept",
+   "label_ko": "스칼라",
+   "label_en": "scalar",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/vector",
+   "type": "Concept",
+   "label_ko": "벡터",
+   "label_en": "vector",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/matrix",
+   "type": "Concept",
+   "label_ko": "행렬",
+   "label_en": "matrix",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/tensor",
+   "type": "Concept",
+   "label_ko": "텐서",
+   "label_en": "tensor",
+   "pages": [
+    "01_what_is_tensor",
+    "02_tensor_map",
+    "03_tensor_ops",
+    "04_decompose_change",
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/tensor-order",
+   "type": "Concept",
+   "label_ko": "차수(축의 개수)",
+   "label_en": "tensor order",
+   "pages": [
+    "01_what_is_tensor",
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/axis",
+   "type": "Concept",
+   "label_ko": "축",
+   "label_en": "axis",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/index",
+   "type": "Concept",
+   "label_ko": "인덱스",
+   "label_en": "index",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/shape",
+   "type": "Concept",
+   "label_ko": "모양(shape)",
+   "label_en": "shape",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/element",
+   "type": "Term",
+   "label_ko": "원소",
+   "label_en": "element",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/slice",
+   "type": "Concept",
+   "label_ko": "슬라이스",
+   "label_en": "slice",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/channel",
+   "type": "Concept",
+   "label_ko": "채널",
+   "label_en": "channel",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/batch",
+   "type": "Concept",
+   "label_ko": "배치(묶음)",
+   "label_en": "batch",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/reshape",
+   "type": "Method",
+   "label_ko": "모양 바꾸기(reshape)",
+   "label_en": "reshape",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/keep-axis-order",
+   "type": "Method",
+   "label_ko": "축 이름표 지키기",
+   "label_en": "keep axis order",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/wrong-axis-order",
+   "type": "Method",
+   "label_ko": "순서 모르고 접기",
+   "label_en": "reshape with wrong axis order",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:term/rank-ambiguity",
+   "type": "Term",
+   "label_ko": "rank (두 가지 뜻)",
+   "label_en": "rank (ambiguous)",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:metric/pixel-match",
+   "type": "Metric",
+   "label_ko": "픽셀 일치율",
+   "label_en": "pixel match rate",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:dataset/toy-heart-image",
+   "type": "Dataset",
+   "label_ko": "장난감 하트 그림 6×8×3",
+   "label_en": "toy heart image 6x8x3",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/no-direction",
+   "type": "Limitation",
+   "label_ko": "숫자 하나뿐, 여러 값을 못 담음",
+   "label_en": "only one value",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/one-direction",
+   "type": "Limitation",
+   "label_ko": "한 방향 목록뿐, 여러 대상을 못 담음",
+   "label_en": "only one list",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/two-directions",
+   "type": "Limitation",
+   "label_ko": "두 방향뿐, 색 같은 셋째 방향이 없음",
+   "label_en": "only two directions",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/single-sample",
+   "type": "Limitation",
+   "label_ko": "한 장뿐, 여러 장을 한꺼번에 못 다룸",
+   "label_en": "only one sample",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/shape-confusion",
+   "type": "Limitation",
+   "label_ko": "축이 많을수록 순서를 헷갈림",
+   "label_en": "axis order confusion",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/address",
+   "type": "Analogy",
+   "label_ko": "아파트 주소(동·층·호) ↔ 인덱스",
+   "label_en": "building address ↔ index",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/spreadsheet",
+   "type": "Analogy",
+   "label_ko": "엑셀 표 ↔ 행렬",
+   "label_en": "spreadsheet ↔ matrix",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/gbc-tensor-def",
+   "type": "Claim",
+   "label_ko": "교과서는 축이 둘보다 많은 배열을 텐서라 부른다",
+   "label_en": "A tensor is an array with more than two axes (textbook usage)",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/kb-order-def",
+   "type": "Claim",
+   "label_ko": "텐서의 차수는 축(way·mode)의 개수다",
+   "label_en": "The order of a tensor is the number of dimensions (ways or modes)",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/image-hwc",
+   "type": "Concept",
+   "label_ko": "컬러 그림은 흔히 높이×너비×채널로 담는다",
+   "label_en": "Color images are commonly stored as height × width × channels",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/core",
+   "type": "Question",
+   "label_ko": "숫자에 축을 하나씩 더하면 무엇을 담을 수 있을까?",
+   "label_en": "What can we hold by adding one axis at a time?",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/duel",
+   "type": "Question",
+   "label_ko": "원소 개수가 같으면 같은 텐서일까?",
+   "label_en": "Same number of elements, same tensor?",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/next-map",
+   "type": "Question",
+   "label_ko": "텐서는 데이터분석·AI·통계·수학의 어디에 쓰일까? (2장 좌표판)",
+   "label_en": "Where are tensors used? (chapter 2)",
+   "pages": [
+    "01_what_is_tensor"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/goodfellow2016deep",
+   "type": "Work",
+   "label_ko": "Deep Learning (Goodfellow 외 2016)",
+   "label_en": "Deep Learning (2016)",
+   "pages": [
+    "01_what_is_tensor",
+    "02_tensor_map",
+    "03_tensor_ops",
+    "04_decompose_change",
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/kolda2009tensor",
+   "type": "Work",
+   "label_ko": "Tensor Decompositions and Applications (Kolda·Bader 2009)",
+   "label_en": "Tensor Decompositions and Applications (2009)",
+   "pages": [
+    "01_what_is_tensor",
+    "02_tensor_map",
+    "03_tensor_ops",
+    "04_decompose_change",
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/tensor-map",
+   "type": "Concept",
+   "label_ko": "차수×분야 좌표판",
+   "label_en": "order-by-field map",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/axis-name",
+   "type": "Concept",
+   "label_ko": "축 이름",
+   "label_en": "axis name",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/pivot-reduce",
+   "type": "Method",
+   "label_ko": "축 따라 합치기(피벗)",
+   "label_en": "reduce along axis (pivot)",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:dataset/sales-cube",
+   "type": "Dataset",
+   "label_ko": "판매 큐브 (5, 4, 6)",
+   "label_en": "toy sales cube",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/embedding-tensor",
+   "type": "Concept",
+   "label_ko": "임베딩 텐서",
+   "label_en": "embedding tensor",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/padding",
+   "type": "Concept",
+   "label_ko": "패딩과 마스크",
+   "label_en": "padding and mask",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/covariance-matrix",
+   "type": "Concept",
+   "label_ko": "공분산 행렬",
+   "label_en": "covariance matrix",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/principal-component",
+   "type": "Concept",
+   "label_ko": "주성분 방향",
+   "label_en": "principal direction",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/moment-tensor",
+   "type": "Concept",
+   "label_ko": "3·4차 적률 텐서",
+   "label_en": "higher-order moment tensors",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/gradient",
+   "type": "Concept",
+   "label_ko": "기울기 ∇φ",
+   "label_en": "gradient",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/coordinate-invariance",
+   "type": "Concept",
+   "label_ko": "좌표 변환 규칙(텐서의 물리적 정의)",
+   "label_en": "transformation law",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/stress-tensor",
+   "type": "Concept",
+   "label_ko": "응력 텐서",
+   "label_en": "stress tensor",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/human-features",
+   "type": "Limitation",
+   "label_ko": "특성을 사람이 정함",
+   "label_en": "human features",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/too-many-numbers",
+   "type": "Limitation",
+   "label_ko": "숫자가 너무 많아 요약이 필요",
+   "label_en": "too many numbers",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/coordinate-dependence",
+   "type": "Limitation",
+   "label_ko": "좌표를 바꾸면 숫자가 바뀜",
+   "label_en": "coordinate dependence",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/curved-coords",
+   "type": "Limitation",
+   "label_ko": "휘어진 좌표는 규칙이 위치마다 다름",
+   "label_en": "curved coords",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/grayscale",
+   "type": "Method",
+   "label_ko": "흑백으로 줄이기",
+   "label_en": "grayscale (drop channel axis)",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/keep-color",
+   "type": "Method",
+   "label_ko": "컬러 축 유지",
+   "label_en": "keep color channels",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:metric/test-accuracy",
+   "type": "Metric",
+   "label_ko": "시험 정확도",
+   "label_en": "test accuracy",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:dataset/toy-apples",
+   "type": "Dataset",
+   "label_ko": "빨강·초록 사과 40장",
+   "label_en": "toy apples",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/pivot-table",
+   "type": "Analogy",
+   "label_ko": "엑셀 피벗 ↔ 축 따라 합치기",
+   "label_en": "pivot table ↔ reduce",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/word-cards",
+   "type": "Analogy",
+   "label_ko": "단어 성격표 카드 ↔ 임베딩",
+   "label_en": "word cards ↔ embedding",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/hiking-map",
+   "type": "Analogy",
+   "label_ko": "돌려 보는 등산 지도 ↔ 좌표 변환",
+   "label_en": "rotated map ↔ transformation",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/physics-tensor-def",
+   "type": "Concept",
+   "label_ko": "물리·수학의 텐서는 좌표 변환 규칙으로 정의된다",
+   "label_en": "Tensors in physics are defined by their transformation law",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/cov-eigen-pca",
+   "type": "Claim",
+   "label_ko": "공분산 행렬의 고유벡터가 주성분 방향이다",
+   "label_en": "Principal components are eigenvectors of the covariance matrix",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/core-02",
+   "type": "Question",
+   "label_ko": "같은 축 세기가 분야마다 무엇을 담는가?",
+   "label_en": "What does each field hold with the same axes?",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/duel-02",
+   "type": "Question",
+   "label_ko": "축 하나를 버려도 사과를 가려낼까?",
+   "label_en": "Can we drop an axis and still classify?",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/next-ops",
+   "type": "Question",
+   "label_ko": "텐서를 어떻게 곱하고 돌리고 접나? (3장)",
+   "label_en": "How to operate on tensors? (ch.3)",
+   "pages": [
+    "02_tensor_map"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/contraction",
+   "type": "Concept",
+   "label_ko": "축약",
+   "label_en": "tensor contraction",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/elementwise-broadcast",
+   "type": "Method",
+   "label_ko": "원소별 연산과 브로드캐스트",
+   "label_en": "element-wise ops and broadcasting",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/matvec",
+   "type": "Method",
+   "label_ko": "행렬 × 벡터",
+   "label_en": "matrix-vector product",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/matmul",
+   "type": "Method",
+   "label_ko": "행렬곱",
+   "label_en": "matrix multiplication",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/permute-reshape",
+   "type": "Method",
+   "label_ko": "전치·축 바꾸기·reshape",
+   "label_en": "transpose, permute, reshape",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/einsum",
+   "type": "Method",
+   "label_ko": "einsum (아인슈타인 표기)",
+   "label_en": "einsum notation",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/determinant",
+   "type": "Concept",
+   "label_ko": "행렬식 det",
+   "label_en": "determinant",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/matmul-order",
+   "type": "Concept",
+   "label_ko": "곱하는 순서와 비용",
+   "label_en": "matrix chain order",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/outer-product",
+   "type": "Concept",
+   "label_ko": "외적",
+   "label_en": "outer product",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/inner-product",
+   "type": "Concept",
+   "label_ko": "내적",
+   "label_en": "inner product",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/memory-order",
+   "type": "Concept",
+   "label_ko": "메모리 순서",
+   "label_en": "memory layout",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/no-mixing",
+   "type": "Limitation",
+   "label_ko": "칸끼리 정보를 섞지 못함",
+   "label_en": "no mixing",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/single-vector",
+   "type": "Limitation",
+   "label_ko": "벡터 하나만 바꿈",
+   "label_en": "single vector",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/fixed-axis-position",
+   "type": "Limitation",
+   "label_ko": "짝지을 축 자리가 고정됨",
+   "label_en": "fixed axis position",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/verbose-description",
+   "type": "Limitation",
+   "label_ko": "연산을 말로 적기 길다",
+   "label_en": "verbose description",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/loop",
+   "type": "Method",
+   "label_ko": "반복문으로 한 칸씩",
+   "label_en": "element loop",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/vectorized",
+   "type": "Method",
+   "label_ko": "벡터화(텐서 연산 한 줄)",
+   "label_en": "vectorized tensor op",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:metric/steps",
+   "type": "Metric",
+   "label_ko": "계산 단계 수",
+   "label_en": "number of steps",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/recipe",
+   "type": "Analogy",
+   "label_ko": "레시피 표 곱하기 ↔ 축약",
+   "label_en": "recipe",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/rubber",
+   "type": "Analogy",
+   "label_ko": "고무판 늘이기 ↔ 행렬 변환",
+   "label_en": "rubber",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/bookshelf",
+   "type": "Analogy",
+   "label_ko": "책장 꽂는 순서 ↔ 메모리 순서",
+   "label_en": "bookshelf",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/einstein-summation",
+   "type": "Concept",
+   "label_ko": "아인슈타인 합 규약",
+   "label_en": "Einstein summation convention",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/broadcasting-gbc",
+   "type": "Claim",
+   "label_ko": "행렬에 벡터를 더할 때 벡터를 각 행에 복사해 더하는 것을 브로드캐스트라 한다",
+   "label_en": "Broadcasting copies a vector to each row when adding to a matrix",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/vectorization",
+   "type": "Concept",
+   "label_ko": "벡터화 단계 수 모형(256칸 동시 처리 가정)",
+   "label_en": "Vectorized ops need fewer steps (model)",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/core-03",
+   "type": "Question",
+   "label_ko": "어떤 축이 짝지어지고 어떤 축이 사라지나?",
+   "label_en": "Which axes pair up and vanish?",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/next-decomp",
+   "type": "Question",
+   "label_ko": "큰 텐서를 작은 조각으로 나눌 수 있나? (4장)",
+   "label_en": "Can we decompose tensors? (ch.4)",
+   "pages": [
+    "03_tensor_ops"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/eigenvector",
+   "type": "Concept",
+   "label_ko": "고유벡터와 고윳값",
+   "label_en": "eigenvector and eigenvalue",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/svd",
+   "type": "Method",
+   "label_ko": "특이값 분해(SVD)",
+   "label_en": "singular value decomposition",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/cp-decomposition",
+   "type": "Method",
+   "label_ko": "CP 분해",
+   "label_en": "CP (CANDECOMP/PARAFAC) decomposition",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/als",
+   "type": "Method",
+   "label_ko": "교대 최소제곱(ALS)",
+   "label_en": "alternating least squares",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/gradient-tensor",
+   "type": "Concept",
+   "label_ko": "기울기 텐서",
+   "label_en": "gradient tensor",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/matrix-rank",
+   "type": "Concept",
+   "label_ko": "행렬의 rank",
+   "label_en": "matrix rank",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/tensor-rank",
+   "type": "Concept",
+   "label_ko": "텐서의 rank (CP rank)",
+   "label_en": "tensor rank",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/low-rank-approx",
+   "type": "Concept",
+   "label_ko": "저랭크 근사",
+   "label_en": "low-rank approximation",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/metric-tensor",
+   "type": "Concept",
+   "label_ko": "계량 텐서",
+   "label_en": "metric tensor",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/covariant-derivative",
+   "type": "Concept",
+   "label_ko": "공변미분",
+   "label_en": "covariant derivative",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/co-contra",
+   "type": "Concept",
+   "label_ko": "공변·반변",
+   "label_en": "covariant and contravariant",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/stress-energy",
+   "type": "Concept",
+   "label_ko": "응력-에너지 텐서",
+   "label_en": "stress-energy tensor",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/tensor-algebra",
+   "type": "Concept",
+   "label_ko": "텐서 대수",
+   "label_en": "tensor algebra",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/square-only",
+   "type": "Limitation",
+   "label_ko": "정사각 행렬에만 있다",
+   "label_en": "square only",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/two-axes-only",
+   "type": "Limitation",
+   "label_ko": "축 둘(행렬)까지만 쪼갠다",
+   "label_en": "two axes only",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/need-gradient",
+   "type": "Limitation",
+   "label_ko": "조각 찾기에도 고치는 방향이 필요",
+   "label_en": "need gradient",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/two-numbers-only",
+   "type": "Limitation",
+   "label_ko": "숫자 두 개만 고쳤다",
+   "label_en": "two numbers only",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/small-lr",
+   "type": "Method",
+   "label_ko": "작은 학습률 0.02",
+   "label_en": "small learning rate",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/large-lr",
+   "type": "Method",
+   "label_ko": "큰 학습률 0.09",
+   "label_en": "large learning rate",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:metric/loss-after-20",
+   "type": "Metric",
+   "label_ko": "20걸음 뒤 오차",
+   "label_en": "loss after 20 steps",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/dough",
+   "type": "Analogy",
+   "label_ko": "반죽 미는 방향 ↔ 고유벡터",
+   "label_en": "dough",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/films",
+   "type": "Analogy",
+   "label_ko": "투명 필름 층 ↔ SVD",
+   "label_en": "films",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/taste",
+   "type": "Analogy",
+   "label_ko": "맛 성분 조합 ↔ CP 분해",
+   "label_en": "taste",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/foggy",
+   "type": "Analogy",
+   "label_ko": "안개 낀 산 ↔ 경사하강",
+   "label_en": "foggy",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/redpen",
+   "type": "Analogy",
+   "label_ko": "빨간 펜 표 ↔ 기울기 텐서",
+   "label_en": "redpen",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:dataset/char-popularity",
+   "type": "Dataset",
+   "label_ko": "캐릭터 인기 텐서 (4, 3, 4)",
+   "label_en": "toy character popularity tensor",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/tensor-rank-hard",
+   "type": "Claim",
+   "label_ko": "텐서 rank는 행렬 rank와 달리 구하기 어렵다",
+   "label_en": "Tensor rank is hard to determine",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/svd-best-lowrank",
+   "type": "Claim",
+   "label_ko": "큰 특이값 k개로 만든 근사가 rank k 근사 중 오차가 가장 작다(Eckart–Young 정리)",
+   "label_en": "Truncated SVD gives the best rank-k approximation (Eckart–Young)",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/cp-als",
+   "type": "Claim",
+   "label_ko": "CP 분해는 흔히 ALS로 계산한다",
+   "label_en": "CP is commonly computed by ALS",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/core-04",
+   "type": "Question",
+   "label_ko": "큰 텐서를 작은 조각으로 설명하고 조금씩 바꿀 수 있나?",
+   "label_en": "Can we decompose and update tensors?",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/next-special",
+   "type": "Question",
+   "label_ko": "특별편: 텐서로 격투 게임의 특성공학·딥러닝·최적화를?",
+   "label_en": "Special: tensors in a fighting game",
+   "pages": [
+    "04_decompose_change"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/scene-tensor",
+   "type": "Concept",
+   "label_ko": "장면 텐서 (2,4,3,4)",
+   "label_en": "scene tensor",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/onehot-command",
+   "type": "Method",
+   "label_ko": "커맨드 원-핫 텐서",
+   "label_en": "one-hot command tensor",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/feature-engineering",
+   "type": "Concept",
+   "label_ko": "특성공학",
+   "label_en": "feature engineering",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/move-predictor",
+   "type": "Method",
+   "label_ko": "다음 기술 예측 모델",
+   "label_en": "next-move predictor",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/baseline",
+   "type": "Concept",
+   "label_ko": "기준선",
+   "label_en": "baseline",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/combo-optimization",
+   "type": "Method",
+   "label_ko": "콤보 최적화(완전 탐색)",
+   "label_en": "combo optimization",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/balance-patch",
+   "type": "Method",
+   "label_ko": "밸런스 패치(경사하강)",
+   "label_en": "balance patch by gradient descent",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/matchup-matrix",
+   "type": "Concept",
+   "label_ko": "상성 행렬 (4,4)",
+   "label_en": "matchup matrix",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/tensor-completion",
+   "type": "Method",
+   "label_ko": "텐서 완성(rank 1 CP)",
+   "label_en": "tensor completion",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/fixed-templates",
+   "type": "Limitation",
+   "label_ko": "정해진 틀만 알아봄",
+   "label_en": "fixed templates",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/read-not-act",
+   "type": "Limitation",
+   "label_ko": "읽어도 쓰는 힘은 따로",
+   "label_en": "read not act",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/missing-cells",
+   "type": "Limitation",
+   "label_ko": "축 많은 데이터의 빈칸은 못 채움",
+   "label_en": "missing cells",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/read-counter",
+   "type": "Method",
+   "label_ko": "박사: 예측해 받아치기",
+   "label_en": "predict and counter",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/best-combo-attack",
+   "type": "Method",
+   "label_ko": "조수: 최적 콤보 공격",
+   "label_en": "optimal combo attack",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:metric/rounds-won",
+   "type": "Metric",
+   "label_ko": "라운드 승수",
+   "label_en": "rounds won",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/piano-roll",
+   "type": "Analogy",
+   "label_ko": "피아노 롤 악보 ↔ 원-핫 커맨드",
+   "label_en": "piano-roll",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/rps",
+   "type": "Analogy",
+   "label_ko": "가위바위보 버릇 ↔ 다음 기술 예측",
+   "label_en": "rps",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/budget",
+   "type": "Analogy",
+   "label_ko": "예산 장보기 ↔ 콤보 최적화",
+   "label_en": "budget",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:analogy/goods",
+   "type": "Analogy",
+   "label_ko": "굿즈 수요 짐작 ↔ 텐서 완성",
+   "label_en": "goods",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/completion-recsys",
+   "type": "Claim",
+   "label_ko": "저랭크 분해로 빈칸을 채우는 것이 추천 시스템의 한 원리다",
+   "label_en": "Low-rank completion underlies recommender systems",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/softmax-regression",
+   "type": "Claim",
+   "label_ko": "소프트맥스 회귀는 층 하나짜리 신경망이다",
+   "label_en": "Softmax regression is a one-layer network",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/core-sp",
+   "type": "Question",
+   "label_ko": "한 판의 격투 게임에서 특성공학·딥러닝·최적화는 어떤 텐서를 다룰까?",
+   "label_en": "Which tensors in one fight?",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/adaptive",
+   "type": "Question",
+   "label_ko": "상대가 버릇을 바꾸면 모델은 어떻게 다시 배울까?",
+   "label_en": "What if the opponent adapts?",
+   "pages": [
+    "sp_tensor_fight"
+   ],
+   "domain": [
+    "ai"
+   ]
+  }
+ ],
+ "add_pages_to_existing": {
+  "lab:topic/linear-algebra": [
+   "01_what_is_tensor"
+  ],
+  "lab:method/gradient-descent": [
+   "04_decompose_change"
+  ],
+  "lab:concept/learning-rate": [
+   "04_decompose_change"
+  ]
+ },
+ "refs": [
+  "goodfellow2016deep",
+  "kolda2009tensor"
+ ]
+}

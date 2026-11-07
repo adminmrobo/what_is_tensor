@@ -1,0 +1,14 @@
+{"series": "텐서 연구실", "domain": ["ai"], "format": "duel",
+ "pages": ["01_what_is_tensor", "02_tensor_map", "03_tensor_ops", "04_decompose_change", "sp_tensor_fight"],
+ "runs": [
+  {"run": 1, "date": "2026-11-07", "skill": "1.9", "reviewer": "Claude Opus 5.5 (같은 대화 자체 검수)",
+   "machine": {"M1": "pass", "M2": "fail: #export 긴 URL로 scrollWidth 546", "M3": "pass", "M4": "pass", "M5": "pass", "M6": "fail: 특별편 캐릭터 그림 4장 누락", "M7": "pass", "M8": "n/a", "M9": "n/a"},
+   "scores": {"A": 4.1, "B": 4.2, "C": 3.6, "D": 4.2, "E": 4.2, "F": 4.0},
+   "tasks_open": ["출처 연결 오류 3건", "출처 없는 Claim 3개", "특별편 버릇 규칙 학습 불가", "모바일 가로 스크롤", "학습 목표", "Tucker·역전파", "1장 생성 AI 상자"],
+   "tasks_done": [], "note": ""},
+  {"run": 2, "date": "2026-11-07", "skill": "1.9", "reviewer": "Claude Opus 5.5 (같은 대화 자체 검수)",
+   "machine": {"M1": "pass", "M2": "pass", "M3": "pass", "M4": "pass", "M5": "pass", "M6": "pass", "M7": "pass", "M8": "n/a", "M9": "n/a"},
+   "scores": {"A": 4.1, "B": 4.2, "C": 4.0, "D": 4.2, "E": 4.2, "F": 4.0},
+   "tasks_open": ["모바일 가로 스크롤", "학습 목표", "Tucker·역전파", "1장 생성 AI 상자"],
+   "tasks_done": [], "note": ""}
+ ]}

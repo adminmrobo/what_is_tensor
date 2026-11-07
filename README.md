@@ -1,4 +1,70 @@
-# 단어 주소 연구실
+# 텐서 연구실 — 축을 세면 보이는 것
+
+텐서를 "축이 여러 개인 숫자 상자"로 시작해, 분야별 쓰임·연산·분해·학습을 거쳐 격투 게임 특별편까지 **직접 돌려 보며** 배우는 초보자용 해설 시리즈입니다. 박사 · 조수(하루) · 초파리 연구원 · 주판봇이 진행합니다.
+
+- **바로 보기 (GitHub Pages):** https://adminmrobo.github.io/what_is_tensor/
+- 글 · 안상선 ((주)M-Robo 대표) · 2026-11-07 · v1.0 · [저자 소개](https://adminmrobo.github.io/who_am_i/who_am_i.html)
+
+## 차례
+
+| 장 | 페이지 | 핵심 질문 | 다루는 것 | 대결 |
+|---|---|---|---|---|
+| 목차 | [index.html](index.html) | — | 시리즈 안내, 배우는 길, 대결 성적표, W01 바로가기 | — |
+| 1장 | [텐서란 무엇인가](01_what_is_tensor.html) | 숫자에 축을 하나씩 더하면 무엇을 담을까? | 스칼라·벡터·행렬·3차·4차(큐브의 줄), shape, 슬라이스, 배치 | 펴고 다시 접기 → 초파리 승 |
+| 2장 | [좌표판](02_tensor_map.html) | 같은 축 세기가 분야마다 무엇을 담을까? | 차수 × 분야 20칸 좌표판, 피벗, 임베딩·패딩, 공분산, 좌표 변환 | 흑백 vs 컬러 → 주판봇 승 |
+| 3장 | [텐서 연산](03_tensor_ops.html) | 어떤 축이 짝지어지고 어떤 축이 사라질까? | 브로드캐스트, y = Ax, 행렬곱과 곱하는 순서, permute·reshape, einsum | 반복문 vs 벡터화 → 주판봇 승 |
+| 4장 | [분해와 변화](04_decompose_change.html) | 큰 텐서를 쪼개고 조금씩 바꿀 수 있을까? | 고유벡터, SVD, CP 분해(ALS), 경사하강, 기울기 텐서, 계량 텐서(심화) | 학습률 → 조건부 |
+| 특별편 | [박사 vs 조수 텐서 대전](sp_tensor_fight.html) | 한 판의 격투 게임에서 어떤 텐서를 다룰까? | 커맨드 원-핫(특성공학), 다음 기술 예측(딥러닝), 콤보·밸런스(최적화), 빈칸 장면 추천(텐서 완성) | 최종 대전 → 박사 2승 1패 |
+
+## 페이지에 들어 있는 것
+- **시뮬레이션:** 모든 그림과 계산(SVD, CP-ALS, 경사하강, 소프트맥스 회귀, 완전 탐색)을 페이지 안에서 직접 합니다. 데이터는 시드를 고정한 설명용 모형입니다.
+- **대결:** 장마다 초파리 연구원(의심하는 쪽)과 주판봇(확신하는 쪽)이 맞붙고, 승패는 페이지가 계산한 숫자로 정합니다. 특별편은 박사와 조수가 선수이고, 초파리 연구원이 심판, 주판봇이 점수판을 맡습니다.
+- **학습 도우미:** 용어 말풍선, 확인 퀴즈 46문항, 진행 막대.
+- **지식 색인·꾸러미:** 장마다 개념 그래프 검색과, 온톨로지(JSON-LD·Turtle·CSV)와 참고문헌(CSL-JSON·BibTeX·RIS)을 ZIP으로 내려받는 섹션이 있습니다.
+- 파일 하나로 동작하며, 외부 요청은 웹 글꼴(Google Fonts)뿐입니다. 브라우저 저장소를 쓰지 않습니다.
+
+## 저장소 구조
+```
+index.html                    시리즈 목차
+01_what_is_tensor.html        1장
+02_tensor_map.html            2장
+03_tensor_ops.html            3장
+04_decompose_change.html      4장
+sp_tensor_fight.html          특별편
+docs/COVER_*.md               장별 글 표지 지시문 (Genspark 등에 붙여 넣는 한국어 지시 + 영어 프롬프트)
+docs/IMG_*.md                 장별 이미지 제작 명세서와 매니페스트
+docs/REVIEW.md                페르소나 감사 결과 (6 페르소나, 기계 점검, 보완 과제)
+docs/review_log.json          검수 기록
+data/kg_*.json                장별 지식 그래프·참고문헌·페이지 서지 (꾸러미 원본)
+data/KG_00_registry_additions_tensor.json   시리즈 등록부 추가분
+W01_word_embedding.html, assets/, docs/IMG_W01_*, docs/kg_W01.json, docs/KG_00_registry.json   W01 (아래 절)
+```
+
+## 표지 그림 현황
+| 키 | 상태 | 지시문 |
+|---|---|---|
+| cover_index | 대체 표지 사용 중 | docs/COVER_00_index.md |
+| cover_01 ~ cover_04 | 대체 표지 사용 중 | docs/COVER_01~04_*.md |
+| cover_SP | 대체 표지 사용 중 | docs/COVER_sp_tensor_fight.md |
+
+그림을 받으면 각 HTML의 `<!-- lab-cover -->` 블록 안 `data-img` 자리에 WebP(1600×900)로 넣습니다.
+
+## 출처와 참고
+- Goodfellow, I., Bengio, Y., Courville, A. (2016). *Deep Learning*. MIT Press.
+- Kolda, T. G., Bader, B. W. (2009). Tensor Decompositions and Applications. *SIAM Review*, 51(3).
+- 개념 구성에 참고한 공개 인포그래픽(Sciences KL, Mathematics Learning Page, @eeanimation, matharium 등)은 각 장 바닥글에 적었습니다. 그림은 옮기지 않고 새로 그렸습니다.
+- 캐릭터 그림: [fruitfly-lab-expressions](https://github.com/adminmrobo/fruitfly-lab-expressions)
+- 확인이 필요한 서지 항목(쪽수·DOI 등)은 각 장 꾸러미 섹션의 "확인 필요 목록"에 있습니다.
+
+## 인용
+안상선 (2026). 텐서 연구실 (1~4장, 특별편), v1.0. https://adminmrobo.github.io/what_is_tensor/
+
+## 라이선스
+저자가 정할 예정입니다. 정하기 전에는 개인 학습 목적의 열람만 허용합니다.
+
+---
+
+## 같은 저장소 · 단어 주소 연구실 (W01)
 
 글 · 안상선 ((주)M-Robo 대표)
 
@@ -6,7 +72,7 @@
 
 ![서가 앞의 네 캐릭터](assets/img/sc_w01_hero.webp)
 
-## 페이지
+### 페이지
 
 | 번호 | 제목 | 파일 |
 |---|---|---|
@@ -21,7 +87,7 @@ W01은 단어를 숫자로 바꾸는 네 가지 방법을 사다리처럼 올라
 
 대결: 유추 8문제에서 원-핫(초파리) 0.20, 3축 임베딩(주판봇) 1.00.
 
-## 폴더
+### 폴더
 
 | 경로 | 내용 |
 |---|---|
@@ -34,7 +100,7 @@ W01은 단어를 숫자로 바꾸는 네 가지 방법을 사다리처럼 올라
 
 온톨로지·서지 꾸러미(JSON-LD·Turtle·CSV·BibTeX·RIS)는 페이지 맨 아래 「꾸러미」에서 ZIP으로 받을 수 있습니다.
 
-## 출처
+### 출처
 
 1. Harris, Z. S. (1954). Distributional Structure. *Word*, 10(2–3), 146–162. doi:10.1080/00437956.1954.11659520
 2. Mikolov, T., Yih, W., & Zweig, G. (2013). Linguistic Regularities in Continuous Space Word Representations. *NAACL-HLT 2013*, 746–751.
@@ -45,11 +111,11 @@ W01은 단어를 숫자로 바꾸는 네 가지 방법을 사다리처럼 올라
 
 페이지의 좌표·문장·정확도는 설명용 예시값입니다.
 
-## 캐릭터
+### 캐릭터
 
 캐릭터 그림: [adminmrobo/fruitfly-lab-expressions](https://github.com/adminmrobo/fruitfly-lab-expressions) (캐릭터 팩 1.3, 주판봇 v2)
 
-## 채워 넣을 것
+### 채워 넣을 것
 
 - 라이선스
 - 공개 주소 (GitHub Pages를 켜면 `https://adminmrobo.github.io/what_is_tensor/`)

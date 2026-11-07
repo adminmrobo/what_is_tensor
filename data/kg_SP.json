@@ -1,0 +1,1326 @@
+{
+ "kg": {
+  "version": "1.0",
+  "page": "sp_tensor_fight",
+  "series": "텐서 연구실",
+  "nodes": [
+   {
+    "id": "lab:concept/tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "텐서",
+     "en": "tensor"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#big",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "다차원 숫자 배열."
+    }
+   },
+   {
+    "id": "lab:concept/scene-tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "장면 텐서 (2,4,3,4)",
+     "en": "scene tensor"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#big",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "캐릭터×표정×복장×행동 4차 텐서. 칸 하나가 장면 하나."
+    }
+   },
+   {
+    "id": "lab:method/onehot-command",
+    "type": "Method",
+    "label": {
+     "ko": "커맨드 원-핫 텐서",
+     "en": "one-hot command tensor"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv1",
+    "level": 2,
+    "family": "basics",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "프레임×버튼 원-핫 행렬과 틀의 축약으로 필살기를 알아본다."
+    }
+   },
+   {
+    "id": "lab:concept/feature-engineering",
+    "type": "Concept",
+    "label": {
+     "ko": "특성공학",
+     "en": "feature engineering"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv1",
+    "level": 2,
+    "family": "basics",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "입력을 모델이 쓰기 좋은 숫자로 바꾸는 일."
+    }
+   },
+   {
+    "id": "lab:method/move-predictor",
+    "type": "Method",
+    "label": {
+     "ko": "다음 기술 예측 모델",
+     "en": "next-move predictor"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 3,
+    "family": "sequence",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "직전 두 기술 원-핫(8,) → softmax(W x + b) (4,). W (4,8)을 경사하강으로 학습."
+    }
+   },
+   {
+    "id": "lab:concept/baseline",
+    "type": "Concept",
+    "label": {
+     "ko": "기준선",
+     "en": "baseline"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 2,
+    "family": "evaluation",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "가장 흔한 기술만 찍는 단순 방법의 정확도."
+    }
+   },
+   {
+    "id": "lab:method/combo-optimization",
+    "type": "Method",
+    "label": {
+     "ko": "콤보 최적화(완전 탐색)",
+     "en": "combo optimization"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "프레임·게이지 제약 안에서 데미지 최대 콤보를 모든 경우를 따져 찾는다."
+    }
+   },
+   {
+    "id": "lab:method/balance-patch",
+    "type": "Method",
+    "label": {
+     "ko": "밸런스 패치(경사하강)",
+     "en": "balance patch by gradient descent"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 3,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "상성 행렬 평균 승률을 0.5로 맞추는 θ를 경사하강으로 찾는다."
+    }
+   },
+   {
+    "id": "lab:concept/matchup-matrix",
+    "type": "Concept",
+    "label": {
+     "ko": "상성 행렬 (4,4)",
+     "en": "matchup matrix"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "내 기술 × 상대 기술 칸마다 승률."
+    }
+   },
+   {
+    "id": "lab:method/tensor-completion",
+    "type": "Method",
+    "label": {
+     "ko": "텐서 완성(rank 1 CP)",
+     "en": "tensor completion"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv4",
+    "level": 4,
+    "family": "generative",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "관측된 칸만으로 CP 분해를 맞춰 빈칸을 짐작한다."
+    }
+   },
+   {
+    "id": "lab:limitation/fixed-templates",
+    "type": "Limitation",
+    "label": {
+     "ko": "정해진 틀만 알아봄",
+     "en": "fixed templates"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv1",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/read-not-act",
+    "type": "Limitation",
+    "label": {
+     "ko": "읽어도 쓰는 힘은 따로",
+     "en": "read not act"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/missing-cells",
+    "type": "Limitation",
+    "label": {
+     "ko": "축 많은 데이터의 빈칸은 못 채움",
+     "en": "missing cells"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:method/read-counter",
+    "type": "Method",
+    "label": {
+     "ko": "박사: 예측해 받아치기",
+     "en": "predict and counter"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:method/best-combo-attack",
+    "type": "Method",
+    "label": {
+     "ko": "조수: 최적 콤보 공격",
+     "en": "optimal combo attack"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:metric/rounds-won",
+    "type": "Metric",
+    "label": {
+     "ko": "라운드 승수",
+     "en": "rounds won"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "evaluation",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/piano-roll",
+    "type": "Analogy",
+    "label": {
+     "ko": "피아노 롤 악보 ↔ 원-핫 커맨드",
+     "en": "piano-roll"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/rps",
+    "type": "Analogy",
+    "label": {
+     "ko": "가위바위보 버릇 ↔ 다음 기술 예측",
+     "en": "rps"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/budget",
+    "type": "Analogy",
+    "label": {
+     "ko": "예산 장보기 ↔ 콤보 최적화",
+     "en": "budget"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/goods",
+    "type": "Analogy",
+    "label": {
+     "ko": "굿즈 수요 짐작 ↔ 텐서 완성",
+     "en": "goods"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/tsp-scene",
+    "type": "Simulation",
+    "label": {
+     "ko": "장면 텐서 고르기",
+     "en": "scene"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/tsp-pad",
+    "type": "Simulation",
+    "label": {
+     "ko": "커맨드 입력",
+     "en": "pad"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/tsp-ml",
+    "type": "Simulation",
+    "label": {
+     "ko": "예측 모델 학습",
+     "en": "ml"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/tsp-combo",
+    "type": "Simulation",
+    "label": {
+     "ko": "콤보 만들기",
+     "en": "combo"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/tsp-bal",
+    "type": "Simulation",
+    "label": {
+     "ko": "밸런스 패치",
+     "en": "bal"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/tsp-fin",
+    "type": "Simulation",
+    "label": {
+     "ko": "빈칸 장면 추천",
+     "en": "fin"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/tsp-fight",
+    "type": "Simulation",
+    "label": {
+     "ko": "최종 대전",
+     "en": "fight"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:claim/completion-recsys",
+    "type": "Claim",
+    "label": {
+     "ko": "저랭크 분해로 빈칸을 채우는 것이 추천 시스템의 한 원리다",
+     "en": "Low-rank completion underlies recommender systems"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv4",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "mid"
+   },
+   {
+    "id": "lab:claim/softmax-regression",
+    "type": "Claim",
+    "label": {
+     "ko": "소프트맥스 회귀는 층 하나짜리 신경망이다",
+     "en": "Softmax regression is a one-layer network"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/goodfellow2016deep",
+    "type": "Work",
+    "label": {
+     "ko": "Deep Learning (2016)",
+     "en": "Deep Learning"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#foot",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/kolda2009tensor",
+    "type": "Work",
+    "label": {
+     "ko": "Tensor Decompositions and Applications (2009)",
+     "en": "Kolda & Bader 2009"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#foot",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/core-sp",
+    "type": "Question",
+    "label": {
+     "ko": "한 판의 격투 게임에서 특성공학·딥러닝·최적화는 어떤 텐서를 다룰까?",
+     "en": "Which tensors in one fight?"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#hero",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/adaptive",
+    "type": "Question",
+    "label": {
+     "ko": "상대가 버릇을 바꾸면 모델은 어떻게 다시 배울까?",
+     "en": "What if the opponent adapts?"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#outro",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv1a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1a",
+     "en": "quiz lv1a"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv1b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1b",
+     "en": "quiz lv1b"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv2a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2a",
+     "en": "quiz lv2a"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv2b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2b",
+     "en": "quiz lv2b"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv3a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3a",
+     "en": "quiz lv3a"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv3b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3b",
+     "en": "quiz lv3b"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv4a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4a",
+     "en": "quiz lv4a"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/tSP-lv4b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4b",
+     "en": "quiz lv4b"
+    },
+    "page": "sp_tensor_fight",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   }
+  ],
+  "edges": [
+   {
+    "s": "lab:method/onehot-command",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:method/move-predictor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/move-predictor",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:method/combo-optimization",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/combo-optimization",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:method/tensor-completion",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/onehot-command",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/fixed-templates",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/fixed-templates",
+    "p": "lab:addressedBy",
+    "o": "lab:method/move-predictor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/move-predictor",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/read-not-act",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/read-not-act",
+    "p": "lab:addressedBy",
+    "o": "lab:method/combo-optimization",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/combo-optimization",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/missing-cells",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/missing-cells",
+    "p": "lab:addressedBy",
+    "o": "lab:method/tensor-completion",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/onehot-command",
+    "p": "lab:broader",
+    "o": "lab:concept/feature-engineering",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/move-predictor",
+    "p": "lab:evaluatedBy",
+    "o": "lab:concept/baseline",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/matchup-matrix",
+    "p": "lab:partOf",
+    "o": "lab:method/balance-patch",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/combo-optimization",
+    "p": "lab:contrastsWith",
+    "o": "lab:method/balance-patch",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/scene-tensor",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/tensor-completion",
+    "p": "lab:evaluatedOn",
+    "o": "lab:concept/scene-tensor",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/read-counter",
+    "p": "lab:contrastsWith",
+    "o": "lab:method/best-combo-attack",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/read-counter",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/rounds-won",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/best-combo-attack",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/rounds-won",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/read-counter",
+    "p": "lab:broader",
+    "o": "lab:method/move-predictor",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/best-combo-attack",
+    "p": "lab:broader",
+    "o": "lab:method/combo-optimization",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/piano-roll",
+    "p": "lab:analogyOf",
+    "o": "lab:method/onehot-command",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/rps",
+    "p": "lab:analogyOf",
+    "o": "lab:method/move-predictor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/budget",
+    "p": "lab:analogyOf",
+    "o": "lab:method/combo-optimization",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/goods",
+    "p": "lab:analogyOf",
+    "o": "lab:method/tensor-completion",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/scene-tensor",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/tsp-scene",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/onehot-command",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/tsp-pad",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/move-predictor",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/tsp-ml",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/combo-optimization",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/tsp-combo",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/balance-patch",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/tsp-bal",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/tensor-completion",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/tsp-fin",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/read-counter",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/tsp-fight",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/completion-recsys",
+    "p": "lab:supports",
+    "o": "lab:method/tensor-completion",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/softmax-regression",
+    "p": "lab:supports",
+    "o": "lab:method/move-predictor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/softmax-regression",
+    "p": "lab:assertedIn",
+    "o": "lab:work/goodfellow2016deep",
+    "anchor": "#foot",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/completion-recsys",
+    "p": "lab:assertedIn",
+    "o": "lab:work/kolda2009tensor",
+    "anchor": "#foot",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:question/core-sp",
+    "p": "lab:relatedTo",
+    "o": "lab:concept/scene-tensor",
+    "anchor": "#hero",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/move-predictor",
+    "p": "lab:raises",
+    "o": "lab:question/adaptive",
+    "anchor": "#outro",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv1a",
+    "p": "lab:assesses",
+    "o": "lab:method/onehot-command",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv1b",
+    "p": "lab:assesses",
+    "o": "lab:method/onehot-command",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv2a",
+    "p": "lab:assesses",
+    "o": "lab:concept/baseline",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv2b",
+    "p": "lab:assesses",
+    "o": "lab:method/move-predictor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv3a",
+    "p": "lab:assesses",
+    "o": "lab:method/combo-optimization",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv3b",
+    "p": "lab:assesses",
+    "o": "lab:method/balance-patch",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv4a",
+    "p": "lab:assesses",
+    "o": "lab:method/tensor-completion",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/tSP-lv4b",
+    "p": "lab:assesses",
+    "o": "lab:method/tensor-completion",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   }
+  ]
+ },
+ "refs": [
+  {
+   "id": "goodfellow2016deep",
+   "type": "book",
+   "title": "Deep Learning",
+   "author": [
+    {
+     "family": "Goodfellow",
+     "given": "Ian"
+    },
+    {
+     "family": "Bengio",
+     "given": "Yoshua"
+    },
+    {
+     "family": "Courville",
+     "given": "Aaron"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016
+     ]
+    ]
+   },
+   "publisher": "MIT Press",
+   "URL": "https://www.deeplearningbook.org/",
+   "lab": {
+    "work": "lab:work/goodfellow2016deep",
+    "role": "background",
+    "supports": [
+     "lab:claim/softmax-regression"
+    ],
+    "locs": [
+     {
+      "claim": "lab:claim/softmax-regression",
+      "loc": "6.2절 출력 단위(softmax)"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (원문 쪽수 미확인)",
+    "note": "쪽수·DOI 확인 필요"
+   }
+  },
+  {
+   "id": "kolda2009tensor",
+   "type": "article-journal",
+   "title": "Tensor Decompositions and Applications",
+   "author": [
+    {
+     "family": "Kolda",
+     "given": "Tamara G."
+    },
+    {
+     "family": "Bader",
+     "given": "Brett W."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2009
+     ]
+    ]
+   },
+   "container-title": "SIAM Review",
+   "volume": "51",
+   "issue": "3",
+   "lab": {
+    "work": "lab:work/kolda2009tensor",
+    "role": "background",
+    "supports": [
+     "lab:claim/completion-recsys"
+    ],
+    "locs": [
+     {
+      "claim": "lab:claim/completion-recsys",
+      "loc": "응용 절(결측값이 있는 분해) — 추천 시스템 언급 여부는 원문 확인 필요"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (원문 쪽수 미확인)",
+    "note": "쪽수·DOI 확인 필요"
+   }
+  }
+ ],
+ "meta": {
+  "title": "특별편 — 박사 vs 조수, 텐서 대전 (특성공학·딥러닝·최적화)",
+  "series": "텐서 연구실",
+  "number": "SP",
+  "creator": [
+   {
+    "name": "안상선",
+    "role": "author",
+    "affiliation": "(주)M-Robo 대표",
+    "nameEn": "Ahn Sangsun"
+   }
+  ],
+  "contributor": [
+   {
+    "name": "AI 보조 제작",
+    "role": "assistant"
+   }
+  ],
+  "date": "2026-11-07",
+  "version": "1.0",
+  "language": [
+   "ko"
+  ],
+  "license": "",
+  "url": "https://adminmrobo.github.io/what_is_tensor/sp_tensor_fight.html",
+  "repository": "https://github.com/adminmrobo/what_is_tensor",
+  "domain": [
+   "ai"
+  ],
+  "domainNote": "주 분야 인공지능, 수학(선형대수) 보조 — 수학 전용 분야 팩 없음",
+  "about": [
+   "lab:concept/scene-tensor",
+   "lab:method/onehot-command",
+   "lab:method/move-predictor",
+   "lab:method/combo-optimization",
+   "lab:method/tensor-completion"
+  ],
+  "educationalLevel": "입문~중급",
+  "learningResourceType": "interactive explainer",
+  "basedOn": [
+   "goodfellow2016deep",
+   "kolda2009tensor"
+  ],
+  "suggestedCitation": "안상선 (2026). 특별편 — 박사 vs 조수, 텐서 대전 (특성공학·딥러닝·최적화). 텐서 연구실 SP, v1.0. https://adminmrobo.github.io/what_is_tensor/sp_tensor_fight.html"
+ }
+}

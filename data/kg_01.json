@@ -1,0 +1,1802 @@
+{
+ "kg": {
+  "version": "1.0",
+  "page": "01_what_is_tensor",
+  "series": "텐서 연구실",
+  "nodes": [
+   {
+    "id": "lab:topic/linear-algebra",
+    "type": "Concept",
+    "label": {
+     "ko": "선형대수",
+     "en": "Linear algebra"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#why",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "벡터·행렬과 그 변환을 다루는 수학. 텐서는 그 연장선에 있다."
+    }
+   },
+   {
+    "id": "lab:concept/scalar",
+    "type": "Concept",
+    "label": {
+     "ko": "스칼라",
+     "en": "scalar"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "축이 없는 숫자 하나. 0차 텐서."
+    },
+    "evidence": [
+     "F01"
+    ]
+   },
+   {
+    "id": "lab:concept/vector",
+    "type": "Concept",
+    "label": {
+     "ko": "벡터",
+     "en": "vector"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "한 줄로 늘어선 숫자 목록. 축이 하나인 1차 텐서."
+    },
+    "evidence": [
+     "F01"
+    ]
+   },
+   {
+    "id": "lab:concept/matrix",
+    "type": "Concept",
+    "label": {
+     "ko": "행렬",
+     "en": "matrix"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "행과 열, 두 축으로 늘어선 숫자 표. 2차 텐서."
+    },
+    "evidence": [
+     "F01"
+    ]
+   },
+   {
+    "id": "lab:concept/tensor",
+    "type": "Concept",
+    "label": {
+     "ko": "텐서",
+     "en": "tensor"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "축이 여러 개인 숫자 묶음. 이 페이지에서는 데이터·코드에서 쓰는 '다차원 배열'의 뜻으로 쓴다."
+    },
+    "evidence": [
+     "F01",
+     "F02"
+    ],
+    "tags": [
+     "다차원 배열",
+     "ndarray"
+    ]
+   },
+   {
+    "id": "lab:concept/tensor-order",
+    "type": "Concept",
+    "label": {
+     "ko": "차수(축의 개수)",
+     "en": "tensor order"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#big",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "altLabel": {
+     "ko": [
+      "축 수",
+      "ndim",
+      "way",
+      "mode 수"
+     ]
+    },
+    "definition": {
+     "ko": "텐서의 원소 하나를 가리키는 데 필요한 인덱스 개수. 코드에서는 ndim."
+    },
+    "evidence": [
+     "F02",
+     "F03"
+    ]
+   },
+   {
+    "id": "lab:concept/axis",
+    "type": "Concept",
+    "label": {
+     "ko": "축",
+     "en": "axis"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "altLabel": {
+     "ko": [
+      "차원",
+      "mode"
+     ]
+    },
+    "definition": {
+     "ko": "숫자가 늘어서는 한 방향. 축마다 이름(행, 열, 채널, 묶음)을 붙여 읽는다."
+    },
+    "evidence": [
+     "F03"
+    ]
+   },
+   {
+    "id": "lab:concept/index",
+    "type": "Concept",
+    "label": {
+     "ko": "인덱스",
+     "en": "index"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "원소 하나의 위치를 가리키는 번호. 0부터 센다(코드 기준)."
+    },
+    "evidence": [
+     "F04"
+    ]
+   },
+   {
+    "id": "lab:concept/shape",
+    "type": "Concept",
+    "label": {
+     "ko": "모양(shape)",
+     "en": "shape"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv5",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "축마다 길이를 적은 목록. 예: (6, 8, 3)."
+    },
+    "evidence": [
+     "F03",
+     "F04"
+    ]
+   },
+   {
+    "id": "lab:concept/element",
+    "type": "Term",
+    "label": {
+     "ko": "원소",
+     "en": "element"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "텐서 안의 숫자 한 칸. 원소 수는 shape의 곱."
+    },
+    "evidence": [
+     "F05"
+    ]
+   },
+   {
+    "id": "lab:concept/slice",
+    "type": "Concept",
+    "label": {
+     "ko": "슬라이스",
+     "en": "slice"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "한 축의 인덱스를 고정해 꺼낸 더 낮은 차수의 조각."
+    },
+    "evidence": [
+     "F06"
+    ]
+   },
+   {
+    "id": "lab:concept/channel",
+    "type": "Concept",
+    "label": {
+     "ko": "채널",
+     "en": "channel"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "vision",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "컬러 그림의 빨강·초록·파랑처럼 같은 자리의 여러 값을 담는 축."
+    },
+    "evidence": [
+     "F07"
+    ]
+   },
+   {
+    "id": "lab:concept/batch",
+    "type": "Concept",
+    "label": {
+     "ko": "배치(묶음)",
+     "en": "batch"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv5",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "같은 모양의 데이터 여러 개를 맨 앞 축으로 쌓은 묶음."
+    },
+    "evidence": [
+     "F08"
+    ]
+   },
+   {
+    "id": "lab:method/reshape",
+    "type": "Method",
+    "label": {
+     "ko": "모양 바꾸기(reshape)",
+     "en": "reshape"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "altLabel": {
+     "ko": [
+      "flatten",
+      "펴기"
+     ]
+    },
+    "definition": {
+     "ko": "원소 개수는 그대로 두고 shape만 바꾸는 연산. 축 순서 약속이 맞아야 같은 데이터로 돌아온다."
+    },
+    "evidence": [
+     "F09"
+    ]
+   },
+   {
+    "id": "lab:method/keep-axis-order",
+    "type": "Method",
+    "label": {
+     "ko": "축 이름표 지키기",
+     "en": "keep axis order"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "펴기와 접기에 같은 축 순서(예: 높이·너비·채널)를 쓰는 방법."
+    }
+   },
+   {
+    "id": "lab:method/wrong-axis-order",
+    "type": "Method",
+    "label": {
+     "ko": "순서 모르고 접기",
+     "en": "reshape with wrong axis order"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "펼 때와 다른 축 순서(채널·높이·너비)로 다시 접는 방법."
+    }
+   },
+   {
+    "id": "lab:term/rank-ambiguity",
+    "type": "Term",
+    "label": {
+     "ko": "rank (두 가지 뜻)",
+     "en": "rank (ambiguous)"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#sum",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "인포그래픽이 말하는 rank는 축의 개수(차수)이고, 행렬의 rank는 독립인 열의 개수다. 이 페이지는 '차수'로 통일한다."
+    },
+    "evidence": [
+     "F02",
+     "F10"
+    ]
+   },
+   {
+    "id": "lab:metric/pixel-match",
+    "type": "Metric",
+    "label": {
+     "ko": "픽셀 일치율",
+     "en": "pixel match rate"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#duel",
+    "level": 1,
+    "family": "evaluation",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "되돌린 그림에서 세 채널 값이 원본과 모두 같은 픽셀의 비율."
+    }
+   },
+   {
+    "id": "lab:dataset/toy-heart-image",
+    "type": "Dataset",
+    "label": {
+     "ko": "장난감 하트 그림 6×8×3",
+     "en": "toy heart image 6x8x3"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "vision",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "이 페이지가 만든 설명용 컬러 그림 텐서. 실제 데이터 아님."
+    }
+   },
+   {
+    "id": "lab:limitation/no-direction",
+    "type": "Limitation",
+    "label": {
+     "ko": "숫자 하나뿐, 여러 값을 못 담음",
+     "en": "only one value"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/one-direction",
+    "type": "Limitation",
+    "label": {
+     "ko": "한 방향 목록뿐, 여러 대상을 못 담음",
+     "en": "only one list"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/two-directions",
+    "type": "Limitation",
+    "label": {
+     "ko": "두 방향뿐, 색 같은 셋째 방향이 없음",
+     "en": "only two directions"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv3",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/single-sample",
+    "type": "Limitation",
+    "label": {
+     "ko": "한 장뿐, 여러 장을 한꺼번에 못 다룸",
+     "en": "only one sample"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:limitation/shape-confusion",
+    "type": "Limitation",
+    "label": {
+     "ko": "축이 많을수록 순서를 헷갈림",
+     "en": "axis order confusion"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv5",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:analogy/address",
+    "type": "Analogy",
+    "label": {
+     "ko": "아파트 주소(동·층·호) ↔ 인덱스",
+     "en": "building address ↔ index"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "동·층·호 세 번호로 집 하나를 찾듯, 인덱스 셋으로 3차 텐서의 칸 하나를 찾는다."
+    }
+   },
+   {
+    "id": "lab:analogy/spreadsheet",
+    "type": "Analogy",
+    "label": {
+     "ko": "엑셀 표 ↔ 행렬",
+     "en": "spreadsheet ↔ matrix"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "definition": {
+     "ko": "행은 사례(고객), 열은 특성(변수)."
+    }
+   },
+   {
+    "id": "lab:sim/order-stairs",
+    "type": "Simulation",
+    "label": {
+     "ko": "차수 계단",
+     "en": "order stairs"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#big",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/scalar-thermo",
+    "type": "Simulation",
+    "label": {
+     "ko": "온도계 스칼라",
+     "en": "scalar thermometer"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/vector-arrow",
+    "type": "Simulation",
+    "label": {
+     "ko": "특성 벡터 화살표",
+     "en": "feature vector arrow"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/matrix-table",
+    "type": "Simulation",
+    "label": {
+     "ko": "고객 표와 흑백 그림",
+     "en": "customer table and grayscale image"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/cube-slicer",
+    "type": "Simulation",
+    "label": {
+     "ko": "색 큐브 자르기",
+     "en": "color cube slicer"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "vision",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/batch-stack",
+    "type": "Simulation",
+    "label": {
+     "ko": "묶음 쌓기와 shape 읽기",
+     "en": "batch stack and shape reading"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv5",
+    "level": 2,
+    "family": "optimization",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:sim/duel-reshape",
+    "type": "Simulation",
+    "label": {
+     "ko": "펴고 다시 접기 대결",
+     "en": "flatten-and-fold duel"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:claim/gbc-tensor-def",
+    "type": "Claim",
+    "label": {
+     "ko": "교과서는 축이 둘보다 많은 배열을 텐서라 부른다",
+     "en": "A tensor is an array with more than two axes (textbook usage)"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "evidence": [
+     "F01"
+    ],
+    "source": [
+     {
+      "cite": "Goodfellow, Bengio, Courville 2016",
+      "loc": "2.1절"
+     }
+    ]
+   },
+   {
+    "id": "lab:claim/kb-order-def",
+    "type": "Claim",
+    "label": {
+     "ko": "텐서의 차수는 축(way·mode)의 개수다",
+     "en": "The order of a tensor is the number of dimensions (ways or modes)"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#big",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high",
+    "evidence": [
+     "F02"
+    ],
+    "source": [
+     {
+      "cite": "Kolda & Bader 2009",
+      "loc": "1절"
+     }
+    ]
+   },
+   {
+    "id": "lab:claim/image-hwc",
+    "type": "Concept",
+    "label": {
+     "ko": "컬러 그림은 흔히 높이×너비×채널로 담는다",
+     "en": "Color images are commonly stored as height × width × channels"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 2,
+    "family": "vision",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "mid",
+    "evidence": [
+     "F07"
+    ]
+   },
+   {
+    "id": "lab:question/core",
+    "type": "Question",
+    "label": {
+     "ko": "숫자에 축을 하나씩 더하면 무엇을 담을 수 있을까?",
+     "en": "What can we hold by adding one axis at a time?"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#hero",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/duel",
+    "type": "Question",
+    "label": {
+     "ko": "원소 개수가 같으면 같은 텐서일까?",
+     "en": "Same number of elements, same tensor?"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#duel",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:question/next-map",
+    "type": "Question",
+    "label": {
+     "ko": "텐서는 데이터분석·AI·통계·수학의 어디에 쓰일까? (2장 좌표판)",
+     "en": "Where are tensors used? (chapter 2)"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#outro",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/goodfellow2016deep",
+    "type": "Work",
+    "label": {
+     "ko": "Deep Learning (Goodfellow 외 2016)",
+     "en": "Deep Learning (2016)"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#foot",
+    "level": 2,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:work/kolda2009tensor",
+    "type": "Work",
+    "label": {
+     "ko": "Tensor Decompositions and Applications (Kolda·Bader 2009)",
+     "en": "Tensor Decompositions and Applications (2009)"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#foot",
+    "level": 3,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv1a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1a",
+     "en": "quiz lv1a"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv1b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv1b",
+     "en": "quiz lv1b"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv1",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv2a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2a",
+     "en": "quiz lv2a"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv2b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv2b",
+     "en": "quiz lv2b"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv2",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv3a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3a",
+     "en": "quiz lv3a"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv3b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv3b",
+     "en": "quiz lv3b"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv3",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv4a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4a",
+     "en": "quiz lv4a"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv4b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv4b",
+     "en": "quiz lv4b"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv4",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv5a",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv5a",
+     "en": "quiz lv5a"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv5",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   },
+   {
+    "id": "lab:quiz/t01-lv5b",
+    "type": "QuizItem",
+    "label": {
+     "ko": "확인 퀴즈 lv5b",
+     "en": "quiz lv5b"
+    },
+    "page": "01_what_is_tensor",
+    "anchor": "#lv5",
+    "level": 1,
+    "family": "math",
+    "domain": [
+     "ai"
+    ],
+    "anchorType": "D",
+    "flyStrength": "none",
+    "status": "known",
+    "confidence": "high"
+   }
+  ],
+  "edges": [
+   {
+    "s": "lab:concept/scalar",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/vector",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/vector",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/matrix",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/batch",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/scalar",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/no-direction",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/no-direction",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/vector",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/vector",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/one-direction",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/one-direction",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/matrix",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/two-directions",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/two-directions",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/single-sample",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/single-sample",
+    "p": "lab:addressedBy",
+    "o": "lab:concept/batch",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/batch",
+    "p": "lab:hasLimitation",
+    "o": "lab:limitation/shape-confusion",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:limitation/shape-confusion",
+    "p": "lab:raises",
+    "o": "lab:question/duel",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/scalar",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv1",
+    "evidence": [
+     "F01"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/vector",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv2",
+    "evidence": [
+     "F01"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/matrix",
+    "p": "lab:broader",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv3",
+    "evidence": [
+     "F01"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor",
+    "p": "lab:broader",
+    "o": "lab:topic/linear-algebra",
+    "anchor": "#why",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/axis",
+    "p": "lab:partOf",
+    "o": "lab:concept/tensor",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/index",
+    "p": "lab:partOf",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/element",
+    "p": "lab:partOf",
+    "o": "lab:concept/tensor",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-order",
+    "p": "lab:partOf",
+    "o": "lab:concept/shape",
+    "anchor": "#lv5",
+    "evidence": [
+     "F03"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/axis",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/tensor-order",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/index",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:concept/slice",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/shape",
+    "p": "lab:prerequisiteOf",
+    "o": "lab:method/reshape",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/channel",
+    "p": "lab:partOf",
+    "o": "lab:dataset/toy-heart-image",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/slice",
+    "p": "lab:explainedIn",
+    "o": "lab:sim/cube-slicer",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/address",
+    "p": "lab:analogyOf",
+    "o": "lab:concept/index",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:analogy/spreadsheet",
+    "p": "lab:analogyOf",
+    "o": "lab:concept/matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor-order",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/order-stairs",
+    "anchor": "#big",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/scalar",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/scalar-thermo",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/vector",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/vector-arrow",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/matrix",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/matrix-table",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/cube-slicer",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/batch",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/batch-stack",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/reshape",
+    "p": "lab:demonstratedBy",
+    "o": "lab:sim/duel-reshape",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/keep-axis-order",
+    "p": "lab:contrastsWith",
+    "o": "lab:method/wrong-axis-order",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/keep-axis-order",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/pixel-match",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/wrong-axis-order",
+    "p": "lab:evaluatedBy",
+    "o": "lab:metric/pixel-match",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/keep-axis-order",
+    "p": "lab:broader",
+    "o": "lab:method/reshape",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:method/wrong-axis-order",
+    "p": "lab:broader",
+    "o": "lab:method/reshape",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:sim/duel-reshape",
+    "p": "lab:evaluatedOn",
+    "o": "lab:dataset/toy-heart-image",
+    "anchor": "#duel",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:term/rank-ambiguity",
+    "p": "lab:relatedTo",
+    "o": "lab:concept/tensor-order",
+    "anchor": "#sum",
+    "evidence": [
+     "F02",
+     "F10"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/gbc-tensor-def",
+    "p": "lab:supports",
+    "o": "lab:concept/tensor",
+    "anchor": "#lv4",
+    "evidence": [
+     "F01"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/gbc-tensor-def",
+    "p": "lab:assertedIn",
+    "o": "lab:work/goodfellow2016deep",
+    "anchor": "#foot",
+    "evidence": [
+     "F01"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/kb-order-def",
+    "p": "lab:supports",
+    "o": "lab:concept/tensor-order",
+    "anchor": "#big",
+    "evidence": [
+     "F02"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/kb-order-def",
+    "p": "lab:assertedIn",
+    "o": "lab:work/kolda2009tensor",
+    "anchor": "#foot",
+    "evidence": [
+     "F02"
+    ],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:claim/image-hwc",
+    "p": "lab:supports",
+    "o": "lab:concept/channel",
+    "anchor": "#lv4",
+    "evidence": [
+     "F07"
+    ],
+    "confidence": "mid"
+   },
+   {
+    "s": "lab:claim/image-hwc",
+    "p": "lab:supports",
+    "o": "lab:dataset/toy-heart-image",
+    "anchor": "#lv4",
+    "evidence": [
+     "F07"
+    ],
+    "confidence": "mid"
+   },
+   {
+    "s": "lab:question/core",
+    "p": "lab:relatedTo",
+    "o": "lab:concept/tensor",
+    "anchor": "#hero",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/tensor",
+    "p": "lab:raises",
+    "o": "lab:question/next-map",
+    "anchor": "#outro",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:concept/batch",
+    "p": "lab:raises",
+    "o": "lab:question/next-map",
+    "anchor": "#outro",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv1a",
+    "p": "lab:assesses",
+    "o": "lab:concept/scalar",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv1b",
+    "p": "lab:assesses",
+    "o": "lab:concept/tensor-order",
+    "anchor": "#lv1",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv2a",
+    "p": "lab:assesses",
+    "o": "lab:concept/index",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv2b",
+    "p": "lab:assesses",
+    "o": "lab:concept/vector",
+    "anchor": "#lv2",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv3a",
+    "p": "lab:assesses",
+    "o": "lab:concept/matrix",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv3b",
+    "p": "lab:assesses",
+    "o": "lab:concept/element",
+    "anchor": "#lv3",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv4a",
+    "p": "lab:assesses",
+    "o": "lab:concept/channel",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv4b",
+    "p": "lab:assesses",
+    "o": "lab:concept/slice",
+    "anchor": "#lv4",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv5a",
+    "p": "lab:assesses",
+    "o": "lab:concept/shape",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   },
+   {
+    "s": "lab:quiz/t01-lv5b",
+    "p": "lab:assesses",
+    "o": "lab:concept/batch",
+    "anchor": "#lv5",
+    "evidence": [],
+    "confidence": "high"
+   }
+  ]
+ },
+ "refs": [
+  {
+   "id": "goodfellow2016deep",
+   "type": "book",
+   "title": "Deep Learning",
+   "author": [
+    {
+     "family": "Goodfellow",
+     "given": "Ian"
+    },
+    {
+     "family": "Bengio",
+     "given": "Yoshua"
+    },
+    {
+     "family": "Courville",
+     "given": "Aaron"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016
+     ]
+    ]
+   },
+   "publisher": "MIT Press",
+   "URL": "https://www.deeplearningbook.org/",
+   "lab": {
+    "work": "lab:work/goodfellow2016deep",
+    "role": "background",
+    "supports": [
+     "lab:claim/gbc-tensor-def",
+     "lab:concept/tensor"
+    ],
+    "locs": [
+     {
+      "claim": "lab:claim/gbc-tensor-def",
+      "loc": "2.1절 Scalars, Vectors, Matrices and Tensors"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (원문 쪽수 미확인)",
+    "note": "쪽수 확인 필요"
+   }
+  },
+  {
+   "id": "kolda2009tensor",
+   "type": "article-journal",
+   "title": "Tensor Decompositions and Applications",
+   "author": [
+    {
+     "family": "Kolda",
+     "given": "Tamara G."
+    },
+    {
+     "family": "Bader",
+     "given": "Brett W."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2009
+     ]
+    ]
+   },
+   "container-title": "SIAM Review",
+   "volume": "51",
+   "issue": "3",
+   "lab": {
+    "work": "lab:work/kolda2009tensor",
+    "role": "background",
+    "supports": [
+     "lab:claim/kb-order-def",
+     "lab:concept/tensor-order"
+    ],
+    "locs": [
+     {
+      "claim": "lab:claim/kb-order-def",
+      "loc": "1절 Introduction"
+     }
+    ],
+    "verified": {
+     "title": true,
+     "authors": true,
+     "year": true,
+     "venue": true,
+     "doi": false,
+     "pages": false
+    },
+    "checkedBy": "작성자 지식 (DOI·쪽수 미확인)",
+    "note": "DOI·쪽수 확인 필요. 4장 텐서 분해의 주 문헌으로 다시 씀"
+   }
+  }
+ ],
+ "meta": {
+  "title": "텐서란 무엇인가 — 축이 하나씩 늘어나는 숫자 상자",
+  "series": "텐서 연구실",
+  "number": "01",
+  "creator": [
+   {
+    "name": "안상선",
+    "role": "author",
+    "affiliation": "(주)M-Robo 대표",
+    "nameEn": "Ahn Sangsun"
+   }
+  ],
+  "contributor": [
+   {
+    "name": "AI 보조 제작",
+    "role": "assistant"
+   }
+  ],
+  "date": "2026-11-07",
+  "version": "1.0",
+  "language": [
+   "ko"
+  ],
+  "license": "",
+  "url": "https://adminmrobo.github.io/what_is_tensor/01_what_is_tensor.html",
+  "repository": "https://github.com/adminmrobo/what_is_tensor",
+  "domain": [
+   "ai"
+  ],
+  "domainNote": "주 분야 인공지능, 수학(선형대수) 보조 — 수학 전용 분야 팩 없음",
+  "about": [
+   "lab:concept/tensor",
+   "lab:concept/tensor-order",
+   "lab:concept/axis",
+   "lab:concept/shape",
+   "lab:concept/channel",
+   "lab:concept/batch"
+  ],
+  "educationalLevel": "입문",
+  "learningResourceType": "interactive explainer",
+  "basedOn": [
+   "goodfellow2016deep",
+   "kolda2009tensor"
+  ],
+  "suggestedCitation": "안상선 (2026). 텐서란 무엇인가 — 축이 하나씩 늘어나는 숫자 상자. 텐서 연구실 01, v1.0. https://adminmrobo.github.io/what_is_tensor/01_what_is_tensor.html"
+ }
+}
